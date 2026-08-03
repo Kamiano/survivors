@@ -48,7 +48,7 @@ export default function WhoWeAre() {
       <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-12">
         {/* Changed grid layout structure to a flexible column layout on mobile to manage stacking order easily */}
         <div className="flex flex-col lg:grid lg:grid-cols-12 items-center gap-16 lg:gap-24">
-          
+
           {/* TEXT CONTENT - HEADER BLOCK */}
           <div className="w-full lg:col-span-6 flex flex-col justify-center lg:order-2">
             <motion.div
@@ -85,11 +85,11 @@ export default function WhoWeAre() {
               <p className="border-l-2 border-pink-300 pl-5 text-base leading-relaxed text-neutral-600">
                 We confront systemic discrimination, legal
 
-invisibility, forced displacement, homelessness, economic exclusion,
+                invisibility, forced displacement, homelessness, economic exclusion,
 
-and shrinking safe spaces, while amplifying silenced voices at the
+                and shrinking safe spaces, while amplifying silenced voices at the
 
-center of movement-building.
+                center of movement-building.
               </p>
             </motion.div>
           </div>
@@ -170,33 +170,31 @@ center of movement-building.
             Positioned cleanly at the bottom of the column order stack for mobile viewports
           */}
           <div className="w-full lg:col-span-12 flex justify-center pt-4 lg:order-3">
-  <Link href="/who-we-are">
-  <motion.a
-        onTapStart={handleTap} // Triggers the absolute millisecond the finger touches the screen
-        whileHover={{ y: -2 }}
-        whileTap={{ scale: 0.98 }}
-        className="group relative inline-flex overflow-hidden rounded-xl bg-neutral-900 px-7 py-4 text-xs font-medium uppercase tracking-[0.18em] text-white transition-all duration-300 hover:shadow-lg w-auto text-center cursor-pointer select-none"
-      >
-        <span className="relative z-10 flex items-center justify-center gap-2">
-          <Compass
-            size={16}
-            /* Combines standard desktop hover with the instant mobile tap state */
-            className={`transition-transform duration-300 group-hover:rotate-45 ${
-              isTapped ? "rotate-45" : ""
-            }`}
-          />
-          <span>About Us</span>
-        </span>
+            <Link href="/who-we-are">
+              <motion.a
+                onTapStart={handleTap} // Triggers the absolute millisecond the finger touches the screen
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                className="group relative inline-flex overflow-hidden rounded-xl bg-neutral-900 px-7 py-4 text-xs font-medium uppercase tracking-[0.18em] text-white transition-all duration-300 hover:shadow-lg w-auto text-center cursor-pointer select-none"
+              >
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  <Compass
+                    size={16}
+                    /* Combines standard desktop hover with the instant mobile tap state */
+                    className={`transition-transform duration-300 group-hover:rotate-45 ${isTapped ? "rotate-45" : ""
+                      }`}
+                  />
+                  <span>About Us</span>
+                </span>
 
-        {/* Combines standard desktop hover with the instant mobile tap state */}
-        <div 
-          className={`absolute inset-0 bg-[#E63946] transition-transform duration-300 group-hover:translate-y-0 ${
-            isTapped ? "translate-y-0" : "translate-y-full"
-          }`} 
-        />
-      </motion.a>
-  </Link>
-</div>
+                {/* Combines standard desktop hover with the instant mobile tap state */}
+                <div
+                  className={`absolute inset-0 bg-[#E63946] transition-transform duration-300 group-hover:translate-y-0 ${isTapped ? "translate-y-0" : "translate-y-full"
+                    }`}
+                />
+              </motion.a>
+            </Link>
+          </div>
 
         </div>
       </div>

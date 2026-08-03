@@ -72,7 +72,7 @@ export default function Hero() {
       y: 0,
       transition: {
         duration: 0.6,
-       ease: [0.25, 0.1, 0.25, 1] as const,
+        ease: [0.25, 0.1, 0.25, 1] as const,
       }
     }
   }
@@ -115,23 +115,23 @@ export default function Hero() {
           }}
         >
 
-         {/* Badge */}
-<motion.div variants={slideTextVariants} className="inline-flex items-center gap-3 mb-8">
-  
-  <div className="flex items-center gap-2 bg-white/10 backdrop-blur-xl border border-white/20 px-5 py-2.5 rounded-full">
-    <span className="text-xs font-bold text-white uppercase tracking-[0.2em]">
-      {slides[currentSlide].badge}
-    </span>
-  </div>
+          {/* Badge */}
+          <motion.div variants={slideTextVariants} className="inline-flex items-center gap-3 mb-8">
 
-  {/* Animated line */}
-  <motion.div
-    initial={{ scaleX: 0 }}
-    animate={{ scaleX: 1 }}
-    transition={{ duration: 0.8, delay: 0.3 }}
-    className="h-px w-12 bg-linear-to-r from-white/50 to-transparent origin-left"
-  />
-</motion.div>
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-xl border border-white/20 px-5 py-2.5 rounded-full">
+              <span className="text-xs font-bold text-white uppercase tracking-[0.2em]">
+                {slides[currentSlide].badge}
+              </span>
+            </div>
+
+            {/* Animated line */}
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="h-px w-12 bg-linear-to-r from-white/50 to-transparent origin-left"
+            />
+          </motion.div>
 
           {/* Title */}
           <motion.div variants={slideTextVariants} className="space-y-3 mb-8">

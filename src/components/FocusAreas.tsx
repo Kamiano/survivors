@@ -5,29 +5,24 @@ import Link from "next/link";
 
 const focusAreas = [
   {
-    title: "Sexual & Reproductive Justice",
+    title: "Expand Health and Wellness Response",
     image: "/images/SRJ.jpeg",
     href: "/sexual",
   },
   {
-    title: "Feminist Leadership Development",
+    title: "Promote and Protect the Rights of Key Population",
     image: "/images/FLD.jpeg",
     href: "/feminist",
   },
   {
-    title: "Crisis Response",
+    title: "Expand Livelihoods Options for Key Population",
     image: "/images/CR.jpeg",
     href: "/crisis",
   },
   {
-    title: "Climate Justice",
+    title: "Organizational Strengthening and Sustainability",
     image: "/images/CJ.jpeg",
     href: "/climate",
-  },
-  {
-    title: "Advocacy & Policy Change",
-    image: "/images/APC.jpeg",
-    href: "/advocacy",
   },
 ];
 
@@ -38,7 +33,7 @@ export default function FocusAreas() {
       className="bg-[#FAFAFA] py-24 md:py-32"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        
+
         {/* Header */}
         <div className="mb-16 flex flex-col items-center justify-center text-center">
           <div className="flex items-center gap-3 mb-5">
@@ -72,7 +67,7 @@ export default function FocusAreas() {
             >
               <Link
                 href={area.href}
-                className="group block text-center" 
+                className="group block text-center"
               >
                 {/* 1. Added aspect-[4/3] to enforce landscape scaling */}
                 {/* 2. Changed rounded-2xl to rounded-none to match the sharp edges in the image (optional) */}
