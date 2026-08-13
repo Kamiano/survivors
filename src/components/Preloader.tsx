@@ -25,14 +25,14 @@ export default function Preloader({ onComplete }: PreloaderProps) {
       {!isDone && (
         <motion.div
           initial={{ opacity: 1 }}
-          exit={{ 
-            y: "-100%", 
-            transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } 
+          exit={{
+            y: "-100%",
+            transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] }
           }}
           className="fixed inset-0 z-9999 bg-[#09090b] flex items-center justify-center select-none"
         >
           <div className="relative w-16 h-16">
-            
+
             {/* Background / Empty Heart Track */}
             <svg
               viewBox="0 0 24 24"
@@ -46,8 +46,8 @@ export default function Preloader({ onComplete }: PreloaderProps) {
             <motion.div
               initial={{ height: "0%" }}
               animate={{ height: "100%" }}
-              transition={{ 
-                duration: 1.8, 
+              transition={{
+                duration: 1.8,
                 ease: [0.42, 0, 0.58, 1] // Fluid, organic liquid easing 
               }}
               className="absolute bottom-0 left-0 w-full overflow-hidden origin-bottom select-none pointer-events-none"

@@ -13,7 +13,7 @@ interface PageHeroProps {
 export default function Hero({
   title,
   currentPage,
-  bgImage = "/images/fm1.jpeg"
+  bgImage = "/images/job.jpeg"
 }: PageHeroProps) {
   return (
     <div className="relative w-full h-90 sm:h-96 md:h-110 xl:h-135 overflow-hidden flex items-end pb-8">

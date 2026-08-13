@@ -32,7 +32,7 @@ export default function LivelihoodsCampaignSection() {
 
             <div className="w-full max-w-xl overflow-hidden shadow-md rounded-sm">
               <img
-                src="/images/climate2.jpeg"
+                src="/images/plan.jpg"
                 alt="Economic empowerment and livelihoods workshop"
                 className="w-full aspect-4/3 object-cover"
               />

@@ -205,8 +205,8 @@ export default function Footer() {
               </p>
               <p>
                 <span className="font-bold mr-1">Phone:</span>
-                <a href="tel:+254707480048" className="hover:underline">
-                  +(254) 707 480 048
+                <a href="tel:+254724352288" className="hover:underline">
+                  +(254) 724 352 288
                 </a>
               </p>
               <p>

@@ -10,8 +10,8 @@ const testimonials = [
     name: "Eric Mwanzia",
     role: "Human Rights Advocate",
     quote:
-      "Their grassroots presence and unyielding dedication to human dignity are inspiring. They create real, safe spaces for key populations to lead, defend their rights, and build resilient communities.",
-    image: '/images/Abdalla.jpeg', // Update this path to Eric's image when available
+      "Their grassroots leadership along the border creates crucial safe spaces for migrant and border sex workers. They empower communities on the margins to defend their dignity, negotiate safety, and lead human rights advocacy.",
+    image: '/images/mwanzia.jpeg', // Update this path to Eric's image when available
   }
 ];
 
@@ -108,19 +108,8 @@ export default function CommunityVoices() {
 
             {/* controls (minimal, not UI-heavy) */}
             <div className="flex gap-3 pt-4">
-              <button
-                onClick={prev}
-                className="w-10 h-10 rounded-full border border-neutral-200 hover:border-[#E63946] flex items-center justify-center transition"
-              >
-                <ChevronLeft className="w-4 h-4" />
-              </button>
 
-              <button
-                onClick={next}
-                className="w-10 h-10 rounded-full border border-neutral-200 hover:border-[#E63946] flex items-center justify-center transition"
-              >
-                <ChevronRight className="w-4 h-4" />
-              </button>
+
             </div>
 
           </div>

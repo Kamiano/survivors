@@ -13,7 +13,7 @@ interface PageHeroProps {
 export default function Hero({
     title = "Explore our vision and roadmap for empowering communities.",
     currentPage = "Strategic Plan",
-    bgImage = "/images/Help.jpeg"
+    bgImage = "/images/plan.jpg"
 }: PageHeroProps) {
     return (
         <div className="relative w-full h-[75vh] overflow-hidden flex items-end pb-8">
