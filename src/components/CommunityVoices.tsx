@@ -7,20 +7,12 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    name: "Phelister Abdalla",
-    role: "Woman human rights defender",
+    name: "Eric Mwanzia",
+    role: "Human Rights Advocate",
     quote:
-      "Joining KNESWO gave me the tools to stand up for my peers. We are no longer victims; we are advocates defending our rights and negotiating our safety.",
-    image:'/images/Abdalla.jpeg',
-  },
-  {
-    id: 2,
-    name: "Shyleen Momanyi",
-    role: "feminist activist, Nairobi",
-    quote:
-      "Decentralizing feminist leadership training has empowered young women to take charge. KNESWO is cultivating a generation of unapologetic activists.",
-    image:"/images/Shyleen.jpeg",
-  },
+      "Their grassroots presence and unyielding dedication to human dignity are inspiring. They create real, safe spaces for key populations to lead, defend their rights, and build resilient communities.",
+    image: '/images/Abdalla.jpeg', // Update this path to Eric's image when available
+  }
 ];
 
 export default function CommunityVoices() {

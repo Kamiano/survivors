@@ -3,97 +3,49 @@
 import { motion } from "framer-motion";
 
 const partners = [
-  { 
-    id: 1, 
-    name: "Partner One", 
-    logo: "/images/Uhai.jpg", 
+  {
+    id: 1,
+    name: "Partner One",
+    logo: "/images/Uhai.jpg",
     containerClass: "h-24 w-24 mx-4",
     imgClass: "scale-70"
   },
-  { 
-    id: 2, 
-    name: "Partner Two", 
-    logo: "/images/connectors.png",
+  {
+    id: 2,
+    name: "Partner Two",
+    logo: "/images/ajws.png",
     containerClass: "h-16 w-48",
-    imgClass: "scale-100" 
+    imgClass: "scale-100"
   },
-  { 
-    id: 3, 
-    name: "Partner Three", 
-    logo: "/images/uafa.png",
+  {
+    id: 3,
+    name: "Partner Three",
+    logo: "/images/amref.png",
     containerClass: "h-16 w-52",
-    imgClass: "scale-100" 
+    imgClass: "scale-100"
   },
-  { 
-    id: 4, 
-    name: "Partner Four", 
+  {
+    id: 4,
+    name: "Partner Four",
     logo: "/images/womenn.png",
     containerClass: "h-16 w-56",
-    imgClass: "scale-70" 
+    imgClass: "scale-70"
   },
-  { 
-    id: 5, 
-    name: "Partner Five", 
-    logo: "/images/pwmn.png",
+  {
+    id: 5,
+    name: "Partner Five",
+    logo: "/images/aids fonds.png",
     containerClass: "h-16 w-56",
-    imgClass: "scale-100" 
+    imgClass: "scale-100"
   },
-  { 
-    id: 6, 
-    name: "Partner six", 
-    logo: "/images/SPI.png",
+  {
+    id: 6,
+    name: "Partner six",
+    logo: "/images/redcross.png",
     containerClass: "h-16 w-56",
-    imgClass: "scale-100" 
+    imgClass: "scale-100"
   },
-  { 
-    id: 8, 
-    name: "Partner eight", 
-    logo: "/images/ywli.png",
-    containerClass: "h-16 w-56",
-    imgClass: "scale-100" 
-  },
-  { 
-    id: 9, 
-    name: "Partner nine", 
-    logo: "/images/neww.jpg",
-    containerClass: "h-16 w-56",
-    imgClass: "scale-100" 
-  },
-  { 
-    id: 10, 
-    name: "Partner ten", 
-    logo: "/images/mama.jpg",
-    containerClass: "h-16 w-56",
-    imgClass: "scale-100" 
-  },
-  { 
-    id: 11, 
-    name: "Partner eleven", 
-    logo: "/images/the.jpeg",
-    containerClass: "h-16 w-56",
-    imgClass: "scale-130" 
-  },
-  { 
-    id: 12, 
-    name: "Partner twelve", 
-    logo: "/images/unw.png",
-    containerClass: "h-16 w-56",
-    imgClass: "scale-100" 
-  },
-  { 
-    id: 13, 
-    name: "Partner thirteen", 
-    logo: "/images/victor.jpeg",
-    containerClass: "h-16 w-56",
-    imgClass: "scale-150" 
-  },
-  { 
-    id: 14, 
-    name: "Partner forteen", 
-    logo: "/images/renam.png",
-    containerClass: "h-16 w-56",
-    imgClass: "scale-100" 
-  },
+
 ];
 
 const infinitePartners = [...partners, ...partners, ...partners, ...partners];
@@ -109,8 +61,8 @@ export default function Partners() {
   };
 
   return (
-    <section 
-      id="partners" 
+    <section
+      id="partners"
       className="relative overflow-hidden bg-neutral-50 py-16 md:py-28"
     >
       {/* Decorative Brand Ambient Glows */}
@@ -118,9 +70,9 @@ export default function Partners() {
       <div className="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-[#E63946]/5 blur-3xl" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-12">
-        
+
         {/* SECTION TITLE */}
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
@@ -134,7 +86,7 @@ export default function Partners() {
             </span>
             <div className="h-px w-8 bg-[#E63946]" />
           </div>
-          
+
           <h2 className="text-3xl md:text-5xl font-light text-neutral-900 leading-tight">
             Our <span className="font-semibold text-[#E63946]">Partners</span>
           </h2>
@@ -142,13 +94,13 @@ export default function Partners() {
 
         {/* SEAMLESS INFINITE MARQUEE STRIP */}
         <div className="relative w-full overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-16 md:before:w-32 before:bg-linear-to-r before:from-neutral-50 before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-16 md:after:w-32 after:bg-linear-to-l after:from-neutral-50 after:to-transparent">
-          
-          <motion.div 
+
+          <motion.div
             className="flex w-max items-center gap-12 md:gap-16 py-4"
             animate={{ x: ["0%", "-50%"] }}
             transition={{
               ease: "linear",
-              duration: 28, 
+              duration: 28,
               repeat: Infinity,
             }}
           >
@@ -157,13 +109,13 @@ export default function Partners() {
                 DYNAMIC PARENT CONTAINER:
                 Instead of a uniform size box, each logo gets the exact layout space it needs to shine!
               */
-              <div 
+              <div
                 key={`${partner.id}-${index}`}
                 className={`relative flex items-center justify-center select-none group shrink-0 ${partner.containerClass}`}
               >
-                <img 
-                  src={partner.logo} 
-                  alt={`${partner.name} logo`} 
+                <img
+                  src={partner.logo}
+                  alt={`${partner.name} logo`}
                   className={`max-h-full max-w-full object-contain filter transition-all duration-300 pointer-events-none origin-center ${partner.imgClass} group-hover:scale-[1.08]`}
                   draggable="false"
                 />

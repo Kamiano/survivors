@@ -31,7 +31,7 @@ export default function ContactBody() {
 
       setIsSubmitted(true);
       setFormState({ name: "", email: "", subject: "", message: "" });
-      
+
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
@@ -46,21 +46,21 @@ export default function ContactBody() {
     {
       icon: Mail,
       title: "Email Us",
-      value: "kneswo@gmail.com",
+      value: "info@survivors.or.ke",
       description: "For general inquiries, partnerships, and advocacy initiatives.",
-      href: "mailto:kneswo@gmail.com"
+      href: "mailto:info@survivors.or.ke"
     },
     {
       icon: Phone,
       title: "Call Direct",
-      value: "+254 707 480 048",
+      value: "+254 724 352 288",
       description: "Mon-Fri from 8:00 AM to 5:00 PM EAT.",
-      href: "tel:+254707480048"
+      href: "tel:+254724352288"
     },
     {
       icon: MapPin,
       title: "Our Headquarters",
-      value: "Nairobi, Kenya",
+      value: "Busia Road opposite Kenya Power Office",
       description: "In community hubs and advocacy centers globally.",
       href: "#"
     }
@@ -73,7 +73,7 @@ export default function ContactBody() {
       <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-[#E61F72]/5 blur-3xl pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-4xl px-6">
-        
+
         {/* Title and Header Block */}
         <div className="space-y-4 mb-12 text-left">
           <div className="flex items-center gap-3">
@@ -218,7 +218,7 @@ export default function ContactBody() {
                   <div className="space-y-2">
                     <h4 className="text-xl font-bold text-neutral-900">Message Dispatched!</h4>
                     <p className="text-sm text-neutral-500 font-light max-w-sm">
-                      Thank you for reaching out to KNESWO. Our team has received your details securely and will follow up shortly.
+                      Thank you for reaching out to Survivors Organization. Our team has received your details securely and will follow up shortly.
                     </p>
                   </div>
                 </motion.div>

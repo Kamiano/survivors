@@ -71,7 +71,7 @@ export default function LatestNews() {
       <div className="absolute top-1/2 right-0 w-4 h-24 bg-accent rounded-l-lg opacity-25" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        
+
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
           {/* LEFT SIDE */}
@@ -94,8 +94,7 @@ export default function LatestNews() {
 
             {/* Supporting line */}
             <p className="text-sm text-neutral-600 leading-relaxed max-w-xl border-l-2 border-[#E63946]/40 pl-4">
-              Reflections, updates, and community insights from the frontlines of feminist
-              organizing across Kenya.
+              Voices, field updates, and reflections from grassroots survivor advocacy and movement building.
             </p>
           </div>
 
@@ -148,7 +147,7 @@ export default function LatestNews() {
                       No Image Uploaded
                     </div>
                   )}
-                  
+
                   {/* Category Badge overlay */}
                   {article.category && (
                     <div className="absolute top-4 left-4 z-10">
@@ -186,8 +185,8 @@ export default function LatestNews() {
 
                   {/* Read More Link */}
                   <div className="mt-auto pt-4 border-t border-dark/5">
-                    <Link 
-                      href={`/news/${article.slug}`} 
+                    <Link
+                      href={`/news/${article.slug}`}
                       className="flex items-center justify-between text-xs font-heading font-bold text-[#E63946] group-hover:text-pink-600 transition-colors duration-300"
                     >
                       <span>Read Article</span>

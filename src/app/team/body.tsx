@@ -15,7 +15,7 @@ export default function TeamBody() {
     {
       name: "Kyazze Arnold",
       role: "FOUNDER & EXECUTIVE DIRECTOR",
-      bio: "Kyazze Arnold is a refugee, queer person, radical feminist, sex worker by choice, and a dedicated human rights defender passionately advocating for the rights, dignity, and liberation of sex workers, queer, and gender-diverse communities. Arnold is the Founder and Executive Director of KNESWO Feminist Initiative, a refugee-led feminist organization working to empower refugee, migrant, and internally displaced sex workers in all their diversities across Kenya and beyond.\n\nWith years of experience in grassroots organizing, feminist movement building, and human rights advocacy, Arnold has become a powerful voice in advancing gender justice, sexual and reproductive justice, and social protection for marginalized communities. Their work centers on creating safe spaces, strengthening feminist leadership, promoting bodily autonomy, and challenging systems of oppression, violence, stigma, discrimination, and criminalization affecting sex workers, refugee women, queer persons, and migrant communities.\n\nArnold is deeply passionate about women’s rights, sex workers’ rights, queer and gender-diverse rights, and the empowerment of adolescent girls and young people from refugee and migrant backgrounds.\n\nThey strongly advocate for access to comprehensive sexual and reproductive health and rights, mental health support, economic justice, and community-led humanitarian responses that prioritize dignity and inclusion.\n\nTheir activism also focuses on climate justice and the disproportionate impact of climate change, displacement, poverty, and humanitarian crises on sex workers and vulnerable migrant communities.\n\nArnold continues to amplify the realities and lived experiences of refugee and migrant sex workers within regional and global feminist and human rights spaces.\n\nIn recognition of their leadership and advocacy, Arnold currently serves on the Global Fund for Women / CoMotion Advisory Committee on Birth Justice and Maternal Newborn Health and is also a Steering Committee Member at the Mixed Migration Centre under the Danish Refugee Council.\n\nThey additionally serve at The Victor Mukasa Foundation as the Representative for the Africa Region, contributing to regional advocacy, movement building, and the advancement of queer and feminist justice across the continent.\n\nThrough these platforms, Arnold continues to influence policies, strengthen feminist movements, and advocate for justice, protection, and meaningful inclusion of marginalized communities globally.",
+      bio: "Kyazze Arnold is a refugee, queer person, radical feminist, sex worker by choice, and a dedicated human rights defender passionately advocating for the rights, dignity, and liberation of sex workers, queer, and gender-diverse communities. Arnold is the Founder and Executive Director of Survivors , a refugee-led feminist organization working to empower refugee, migrant, and internally displaced sex workers in all their diversities across Kenya and beyond.\n\nWith years of experience in grassroots organizing, feminist movement building, and human rights advocacy, Arnold has become a powerful voice in advancing gender justice, sexual and reproductive justice, and social protection for marginalized communities. Their work centers on creating safe spaces, strengthening feminist leadership, promoting bodily autonomy, and challenging systems of oppression, violence, stigma, discrimination, and criminalization affecting sex workers, refugee women, queer persons, and migrant communities.\n\nArnold is deeply passionate about women’s rights, sex workers’ rights, queer and gender-diverse rights, and the empowerment of adolescent girls and young people from refugee and migrant backgrounds.\n\nThey strongly advocate for access to comprehensive sexual and reproductive health and rights, mental health support, economic justice, and community-led humanitarian responses that prioritize dignity and inclusion.\n\nTheir activism also focuses on climate justice and the disproportionate impact of climate change, displacement, poverty, and humanitarian crises on sex workers and vulnerable migrant communities.\n\nArnold continues to amplify the realities and lived experiences of refugee and migrant sex workers within regional and global feminist and human rights spaces.\n\nIn recognition of their leadership and advocacy, Arnold currently serves on the Global Fund for Women / CoMotion Advisory Committee on Birth Justice and Maternal Newborn Health and is also a Steering Committee Member at the Mixed Migration Centre under the Danish Refugee Council.\n\nThey additionally serve at The Victor Mukasa Foundation as the Representative for the Africa Region, contributing to regional advocacy, movement building, and the advancement of queer and feminist justice across the continent.\n\nThrough these platforms, Arnold continues to influence policies, strengthen feminist movements, and advocate for justice, protection, and meaningful inclusion of marginalized communities globally.",
       imageSrc: "/images/Kyaze.jpeg"
     },
     {
@@ -65,7 +65,7 @@ export default function TeamBody() {
     {
       name: "Loya waihenya",
       role: "BOARD SECRETARY",
-      bio:"Loya Waihenya is a lawyer, philanthropist, human rights advocate, leader and strategic thinker with a strong commitment to advancing social justice and restoring dignity to vulnerable communities. She is the founder of the Loya Waihenya Foundation, an organization dedicated to restoring dignity by providing probono legal aid services to refugees, marginalized persons, women and prisoners. Through the Froundation's Better Sleep for All Program, the organization provides double decker beds, mattresses and beddings to vulnerable persons in society.The Foundation believes there is a direct correlation between better sleep and improved mental health, dignity and overall well-being. Loya holds a Bachelor of Law (LL.B) degree from the Catholic University of Eastern Africa(CUEA) and is a Certified Professional Mediator (CPM). She currently supports refugees in Kenya in partnership with Alight.Org an international NGO that supports refugees globally.She has previously worked with the National Gay and Human Rights Commission (Legal Arc) and UHAI Eashri where she supported LGBTQI+ persons through legal aid, grant management and human rights advocacy. Loya enjoys networking and is passionate about leadership,  human rights and community development.She enjoys co-creating practical, realistic and innovative solutions that make the world a better place.",
+      bio: "Loya Waihenya is a lawyer, philanthropist, human rights advocate, leader and strategic thinker with a strong commitment to advancing social justice and restoring dignity to vulnerable communities. She is the founder of the Loya Waihenya Foundation, an organization dedicated to restoring dignity by providing probono legal aid services to refugees, marginalized persons, women and prisoners. Through the Froundation's Better Sleep for All Program, the organization provides double decker beds, mattresses and beddings to vulnerable persons in society.The Foundation believes there is a direct correlation between better sleep and improved mental health, dignity and overall well-being. Loya holds a Bachelor of Law (LL.B) degree from the Catholic University of Eastern Africa(CUEA) and is a Certified Professional Mediator (CPM). She currently supports refugees in Kenya in partnership with Alight.Org an international NGO that supports refugees globally.She has previously worked with the National Gay and Human Rights Commission (Legal Arc) and UHAI Eashri where she supported LGBTQI+ persons through legal aid, grant management and human rights advocacy. Loya enjoys networking and is passionate about leadership,  human rights and community development.She enjoys co-creating practical, realistic and innovative solutions that make the world a better place.",
       imageSrc: "/images/loya.jpeg"
     },
     {
@@ -75,8 +75,8 @@ export default function TeamBody() {
       imageSrc: "/images/newww.png"
     },
     {
-      name:"Faith Mbehero",
-      role:"BOARD MEMBER",
+      name: "Faith Mbehero",
+      role: "BOARD MEMBER",
       bio: "Faith Mbehero is a Kenyan SRHR leader, nurse midwife, and health systems specialist with more than 18 years of experience advancing sexual and reproductive health, gender justice, and equitable access to care across Africa. She has led regional programs in Kenya, Uganda, Burkina Faso, Benin, and Senegal, working alongside governments, civil society organizations, healthcare providers, and grassroots movements to strengthen health systems and expand access to quality, rights-based services for women, adolescents, and marginalized communities. Her expertise spans clinical quality improvement, abortion care advocacy, self-care interventions, organizational strengthening, and movement building. Faith previously served as Director of Service Delivery for Africa at Planned Parenthood Global, where she supported youth-led and provider-led initiatives and strengthened partnerships that advanced reproductive rights and locally led solutions. She is also the founding Executive Director of Reproductive Health Network Kenya (RHNK), a provider network established to improve access to quality reproductive healthcare and amplify the voices of frontline providers. Currently, Faith is the Founder and Head of Mission and Internal Operations at Third Sector Builders, a Pan-African advisory organization supporting feminist movements, community-based organizations, and locally led systems change. Faith is passionate about centering the leadership, dignity, and lived experiences of historically excluded populations and young people, in the design and governance of health and social justice initiatives.",
       imageSrc: "/images/BOARD.jpeg"
     }
@@ -89,10 +89,10 @@ export default function TeamBody() {
       <div className="absolute bottom-12 right-0 h-96 w-96 rounded-full bg-[#E61F72]/3 blur-3xl pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-12">
-        
+
         {/* SECTION 1: SECRETARIAT HEADLINE */}
         <div className="mb-12 md:mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -144,7 +144,7 @@ export default function TeamBody() {
 
         {/* SECTION 2: STRATEGY PROGRAM ADVISORS HEADLINE & DESCRIPTION */}
         <div className="mb-12 md:mb-16 pt-8 border-t border-neutral-100">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -153,8 +153,8 @@ export default function TeamBody() {
           >
             Strategy Program Advisors
           </motion.h2>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -217,7 +217,7 @@ export default function TeamBody() {
 
         {/* SECTION 3: OUR BOARD HEADLINE */}
         <div className="mb-12 md:mb-16 pt-8 border-t border-neutral-100">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

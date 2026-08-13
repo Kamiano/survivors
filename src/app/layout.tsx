@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit, Inter } from "next/font/google";
-import Script from "next/script"; // 1. Imported for optimized Google Analytics injection
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/next";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -19,16 +17,23 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "KNESWO FEMINIST INITIATIVE",
-  description: "A bold, modern, feminist movement-building organization working alongside marginalized communities in Kenya to advance justice, dignity, leadership, and systemic change.",
-  keywords: ["KNESWO", "Sex Workers Rights Kenya",'KNESWO FEMINIST INITIATIVE', "Feminist Leadership", "Advocacy", "Human Rights Kenya", "Justice", "Climate Justice"],
+  title: "Survivors Organization",
+  description: "A community-led organization working alongside key populations and marginalized communities in Kenya to advance justice, health access, rights, and economic empowerment.",
+  keywords: [
+    "Community Advocacy Kenya",
+    "Human Rights Kenya",
+    "Key Populations Support",
+    "Economic Empowerment",
+    "Health Rights",
+    "Social Justice Kenya"
+  ],
   openGraph: {
-    title: "KNESWO | KNESWO FEMINIST INITIATIVE",
-    description: "Leading with dignity, power, and unapologetic resistance. Building feminist leadership across Kenya.",
-    url: "https://kneswo.org",
+    title: "Community Empowerment & Advocacy Initiative",
+    description: "Empowering communities through human rights advocacy, health support, and economic opportunities across Kenya.",
+    url: "http://localhost:3000",
     type: "website",
     locale: "en_KE",
-    siteName: "KNESWO FEMINIST INITIATIVE",
+    siteName: "Community Empowerment Initiative",
   },
 };
 
@@ -39,29 +44,12 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en" suppressHydrationWarning
+      lang="en"
+      suppressHydrationWarning
       className={`${outfit.variable} ${inter.variable} h-full antialiased scroll-smooth`}
     >
-      <head>
-        {/* 2. Google Analytics Tag (gtag.js) */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-R10VD0K01P"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics-kneswo" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-R10VD0K01P');
-          `}
-        </Script>
-      </head>
       <body className="min-h-full flex flex-col font-body bg-white text-dark">
         {children}
-        {/* Vercel Analytics Tracker */}
-        <Analytics />
       </body>
     </html>
   );

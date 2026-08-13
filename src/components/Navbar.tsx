@@ -35,17 +35,16 @@ export default function Navbar() {
       name: "About Us",
       dropdown: [
         { name: "Who We Are", href: "/who-we-are" },
-        { name: "Our Team", href: "/team" }
+        { name: "Our Team", href: "#" }
       ],
     },
     {
       name: "Priorities",
       dropdown: [
-        { name: "Sexual & Reproductive Justice", href: "/sexual" },
-        { name: "Feminist Leadership Development", href: "/feminist" },
-        { name: "Crisis Response", href: "/crisis" },
-        { name: "Climate Justice", href: "/climate" },
-        { name: "Advocacy & Policy Change", href: "/advocacy" },
+        { name: "Expand Health and Wellness Response", href: "/health" },
+        { name: "Promote and Protect the Rights of Key Population", href: "/rights" },
+        { name: "Expand Livelihoods Options for Key Population", href: "/livelihoods" },
+        { name: "Organizational Strengthening and Sustainability", href: "/organizational" },
       ],
     },
     { name: "Our Strategic Plan", href: "/plan" },
@@ -65,8 +64,8 @@ export default function Navbar() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${isScrolled
-            ? "bg-white/90 backdrop-blur-xl py-4 shadow-sm border-b border-gray-100"
-            : "bg-white/15 backdrop-blur-md py-6 border-b border-white/5"
+          ? "bg-white/90 backdrop-blur-xl py-4 shadow-sm border-b border-gray-100"
+          : "bg-white/15 backdrop-blur-md py-6 border-b border-white/5"
           }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
@@ -75,8 +74,8 @@ export default function Navbar() {
           <Link href="/" className="flex items-center group">
             <div className="h-12 w-auto transition-transform duration-300 group-hover:scale-102">
               <img
-                src="/images/log.png"
-                alt="KNESWO Logo"
+                src="/images/logo.png"
+                alt="Survivors org logo"
                 className="h-full w-auto object-contain"
               />
             </div>
@@ -122,8 +121,8 @@ export default function Navbar() {
                               key={item.name}
                               href={item.href}
                               className={`group/item flex items-center justify-between px-4 py-3.5 text-sm rounded-xl transition-all duration-300 ${isDropdownActive
-                                  ? "bg-primary/5 text-primary font-bold"
-                                  : "text-gray-700 hover:bg-gray-50 hover:text-primary"
+                                ? "bg-primary/5 text-primary font-bold"
+                                : "text-gray-700 hover:bg-gray-50 hover:text-primary"
                                 }`}
                             >
                               <span>{item.name}</span>
@@ -140,8 +139,8 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   className={`font-body text-sm font-semibold transition-colors duration-300 relative py-2 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 ${isActiveRoute(link)
-                      ? "text-primary font-bold after:w-full"
-                      : "text-gray-800 hover:text-primary after:w-0 hover:after:w-full"
+                    ? "text-primary font-bold after:w-full"
+                    : "text-gray-800 hover:text-primary after:w-0 hover:after:w-full"
                     }`}
                 >
                   {link.name}
@@ -192,7 +191,7 @@ export default function Navbar() {
             >
               <div className="flex items-center justify-between mb-12">
                 <div className="h-10 w-auto">
-                  <img src="/images/log.png" alt="KNESWO Logo" className="h-full w-auto object-contain" />
+                  <img src="/images/logo.png" alt="Survivors org Logo" className="h-full w-auto object-contain" />
                 </div>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}

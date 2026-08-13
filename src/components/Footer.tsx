@@ -161,14 +161,14 @@ export default function Footer() {
           {/* COLUMN 1: GRAPHIC LOGO AND BRAND LABEL & SOCIALS */}
           <div className="md:col-span-3 flex flex-col items-start space-y-6">
             <img
-              src="/images/log.png"
-              alt="KNESWO Logo"
+              src="/images/logo.png"
+              alt="Survivors org Logo"
               className="max-h-24 w-auto object-contain"
             />
             {/* Social Media Links Layout */}
             <div className="flex items-center gap-4 text-[#260e10]/80">
               <a
-                href="https://web.facebook.com/kneswo/?_rdc=1&_rdr#"
+                href="https://web.facebook.com/profile.php?id=100086390283233"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-blue-grey-600 transition-colors"
@@ -176,17 +176,9 @@ export default function Footer() {
               >
                 <FaFacebookF size={20} />
               </a>
+
               <a
-                href="https://www.instagram.com/kneswo/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-grey-600 transition-colors"
-                title="Instagram"
-              >
-                <FaInstagram size={20} />
-              </a>
-              <a
-                href="https://x.com/refugee36214"
+                href="https://x.com/survivorsbusia?lang=bg"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-blue-grey-600 transition-colors"
@@ -194,29 +186,21 @@ export default function Footer() {
               >
                 <FaXTwitter size={20} />
               </a>
-              <a
-                href="https://bsky.app/profile/kneswo.bsky.social"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-grey-600 transition-colors flex items-center"
-                title="Bluesky"
-              >
-                <MessageSquare size={20} />
-              </a>
+
             </div>
           </div>
 
           {/* COLUMN 2: TITLE & CONTACT INFO */}
           <div className="md:col-span-3 space-y-5 text-sm">
             <h3 className="font-bold text-lg leading-snug text-[#260e10] tracking-wide">
-              KNESWO
+              Survivors Organization
             </h3>
 
             <div className="space-y-3 pt-1 text-[#260e10] font-normal">
               <p>
                 <span className="font-bold mr-1">Email:</span>
-                <a href="mailto:kneswo@gmail.com" className="hover:underline">
-                  kneswo@gmail.com
+                <a href="mailto:info@survivors.or.ke" className="hover:underline">
+                  info@survivors.or.ke
                 </a>
               </p>
               <p>
@@ -227,7 +211,7 @@ export default function Footer() {
               </p>
               <p>
                 <span className="font-bold mr-1">Address:</span>
-                Langata Civil Servant Estate, Nairobi
+                Busia Road opposite Kenya Power Office
               </p>
             </div>
           </div>
@@ -258,7 +242,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/team"
+                  href="#"
                   className="group flex items-center gap-2 hover:underline"
                 >
                   <ArrowRight size={16} className="text-[#260e10] shrink-0" />
@@ -280,7 +264,7 @@ export default function Footer() {
                   className="group flex items-center gap-2 hover:underline"
                 >
                   <ArrowRight size={16} className="text-[#260e10] shrink-0" />
-                  <span>Advocacy & Policy Change</span>
+                  <span>Expand Health and Wellness Response</span>
                 </Link>
               </li>
               <li>
@@ -289,16 +273,16 @@ export default function Footer() {
                   className="group flex items-center gap-2 hover:underline"
                 >
                   <ArrowRight size={16} className="text-[#260e10] shrink-0" />
-                  <span>Climate Justice</span>
+                  <span>Promote and Protect the Rights of Key Population</span>
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/sexual"
+                  href="/health"
                   className="group flex items-center gap-2 hover:underline"
                 >
                   <ArrowRight size={16} className="text-[#260e10] shrink-0" />
-                  <span>Sexual & Reproductive Justice</span>
+                  <span>Expand Livelihoods Options for Key Population</span>
                 </Link>
               </li>
               <li>
@@ -307,18 +291,10 @@ export default function Footer() {
                   className="group flex items-center gap-2 hover:underline"
                 >
                   <ArrowRight size={16} className="text-[#260e10] shrink-0" />
-                  <span>Crisis Response</span>
+                  <span>Organizational Strengthening and Sustainability</span>
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/feminist"
-                  className="group flex items-center gap-2 hover:underline"
-                >
-                  <ArrowRight size={16} className="text-[#260e10] shrink-0" />
-                  <span>Feminist Leadership Development</span>
-                </Link>
-              </li>
+
             </ul>
           </div>
         </div>

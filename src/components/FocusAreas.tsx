@@ -6,22 +6,22 @@ import Link from "next/link";
 const focusAreas = [
   {
     title: "Expand Health and Wellness Response",
-    image: "/images/SRJ.jpeg",
-    href: "/sexual",
+    image: "/images/health.jpeg",
+    href: "/health",
   },
   {
     title: "Promote and Protect the Rights of Key Population",
-    image: "/images/FLD.jpeg",
+    image: "/images/kp.jpeg",
     href: "/feminist",
   },
   {
     title: "Expand Livelihoods Options for Key Population",
-    image: "/images/CR.jpeg",
+    image: "/images/feed.jpg",
     href: "/crisis",
   },
   {
     title: "Organizational Strengthening and Sustainability",
-    image: "/images/CJ.jpeg",
+    image: "/images/group.jpg",
     href: "/climate",
   },
 ];

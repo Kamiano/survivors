@@ -42,7 +42,7 @@ export default function SingleNewsPage() {
           body,
           "category": categories[0]->title
         }`;
-        
+
         const data = await client.fetch(query, { slug });
         setPost(data);
       } catch (error) {
@@ -105,10 +105,10 @@ export default function SingleNewsPage() {
 
   return (
     <main className="bg-white min-h-screen relative selection:bg-[#E63946]/10 selection:text-[#E63946]">
-      
+
       {/* 1. DESKTOP FLOATING SOCIAL SHARE BAR (Locks to left edge out of content's way) */}
       <aside className="hidden xl:flex flex-col gap-3 fixed top-1/3 left-8 z-50 p-2 bg-white rounded-full shadow-lg border border-neutral-100">
-        <a 
+        <a
           href={`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -117,7 +117,7 @@ export default function SingleNewsPage() {
         >
           <FaTwitter size={15} />
         </a>
-        <a 
+        <a
           href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -126,7 +126,7 @@ export default function SingleNewsPage() {
         >
           <FaFacebook size={15} />
         </a>
-        <a 
+        <a
           href={`https://api.whatsapp.com/send?text=${encodedTitle}%20${encodedUrl}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -135,7 +135,7 @@ export default function SingleNewsPage() {
         >
           <MessageSquare size={15} />
         </a>
-        <a 
+        <a
           href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -149,11 +149,11 @@ export default function SingleNewsPage() {
       {/* 2. PREMIUM EDITORIAL HEADER BANNER (Fixes empty space issue) */}
       <div className="w-full bg-neutral-50/60 border-b border-neutral-100/80 pt-10 pb-12 mb-12">
         <div className="max-w-3xl mx-auto px-6">
-          
+
           {/* Structured Breadcrumbs */}
           <nav className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-400 mb-8">
-            <Link 
-              href="/news" 
+            <Link
+              href="/news"
               className="hover:text-[#E63946] transition-colors flex items-center gap-1.5 group"
             >
               <ArrowLeft size={12} className="group-hover:-translate-x-0.5 transition-transform" />
@@ -190,7 +190,7 @@ export default function SingleNewsPage() {
               <span className="text-neutral-300 hidden sm:inline">•</span>
               <div className="flex items-center gap-1.5">
                 <User size={14} className="text-[#E63946]" />
-                <span>KNESWO Feminist Initiative</span>
+                <span>Survivors Organization</span>
               </div>
             </div>
           </div>
@@ -200,15 +200,15 @@ export default function SingleNewsPage() {
 
       {/* 3. CORE ARTICLE WORKSPACE CONTAINER */}
       <div className="max-w-3xl mx-auto px-6">
-        
+
         {/* ADAPTIVE IMAGE WRAPPER (Protects tall/landscape ratios without cropping) */}
         {post.mainImage && (
           <div className="w-full flex justify-center mb-12">
             <div className="max-w-xl w-full rounded-2xl overflow-hidden bg-neutral-50/50 border border-neutral-100 shadow-sm">
-              <img 
-                src={post.mainImage} 
-                alt={post.title} 
-                className="w-full h-auto max-h-[65vh] object-cover object-center" 
+              <img
+                src={post.mainImage}
+                alt={post.title}
+                className="w-full h-auto max-h-[65vh] object-cover object-center"
               />
             </div>
           </div>
@@ -217,7 +217,7 @@ export default function SingleNewsPage() {
         {/* MOBILE & TABLET SHARE BAR (Renders right below image on compact viewports) */}
         <div className="xl:hidden flex items-center gap-3 py-4 border-b border-neutral-100 mb-8">
           <span className="text-xs text-neutral-400 font-medium uppercase tracking-wider mr-2">Share:</span>
-          <a 
+          <a
             href={`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`}
             target="_blank"
             rel="noopener noreferrer"
@@ -225,7 +225,7 @@ export default function SingleNewsPage() {
           >
             <FaTwitter size={14} />
           </a>
-          <a 
+          <a
             href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
             target="_blank"
             rel="noopener noreferrer"
@@ -233,7 +233,7 @@ export default function SingleNewsPage() {
           >
             <FaFacebook size={14} />
           </a>
-          <a 
+          <a
             href={`https://api.whatsapp.com/send?text=${encodedTitle}%20${encodedUrl}`}
             target="_blank"
             rel="noopener noreferrer"

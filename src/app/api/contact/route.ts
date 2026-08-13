@@ -21,8 +21,8 @@ export async function POST(request: Request) {
       // NOTE: While in testing, Resend requires you to use 'onboarding@resend.dev'
       // Once your client verifies their domain (e.g., yourclient.com), 
       // you can change this to 'Contact Form <contact@yourclient.com>'
-      from: "KNESWO Contact <onboarding@resend.dev>",
-      to: ["kneswo@gmail.com"], // Your client's target Gmail address
+      from: "Survivors Organization Contact <onboarding@resend.dev>",
+      to: ["info@survivors.or.ke"], // Your client's target Gmail address
       replyTo: email,           // Allows your client to click "Reply" directly in Gmail to reply to the user
       subject: `[Contact Form Submission] ${subject}`,
       html: `

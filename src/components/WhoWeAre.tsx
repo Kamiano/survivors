@@ -35,18 +35,15 @@ export default function WhoWeAre() {
   const [isTapped, setIsTapped] = useState(false);
   const handleTap = () => {
     setIsTapped(true);
-  }
+  };
 
   return (
-    <section
-      className="relative overflow-hidden bg-white py-24 md:py-32"
-    >
+    <section className="relative overflow-hidden bg-white py-24 md:py-32">
       {/* Background accents */}
       <div className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-[#E63946]/5 blur-3xl" />
       <div className="absolute -bottom-32 -right-20 h-96 w-96 rounded-full bg-[#E63946]/5 blur-3xl" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-12">
-        {/* Changed grid layout structure to a flexible column layout on mobile to manage stacking order easily */}
         <div className="flex flex-col lg:grid lg:grid-cols-12 items-center gap-16 lg:gap-24">
 
           {/* TEXT CONTENT - HEADER BLOCK */}
@@ -68,35 +65,27 @@ export default function WhoWeAre() {
 
               {/* Heading */}
               <h2 className="text-4xl font-light leading-[1.15] text-neutral-900 sm:text-5xl lg:text-6xl">
-                We begin from those
+                Standing with those
                 <span className="block font-semibold text-[#E63946]">
-                  often left unheard.
+                  seeking safety & justice.
                 </span>
               </h2>
 
               {/* Declaration */}
               <p className="text-lg leading-relaxed text-neutral-800">
-                We are the first feminist organization in Kenya led by
-                refugee, migrant, stateless and internally displaced sex
-                workers in all our diversities.
+                Survivors Busia is a grassroots, survivor-led organization operating
+                at the Kenya–Uganda border to defend human rights, heal trauma, and restore dignity.
               </p>
 
               {/* Supporting Text */}
               <p className="border-l-2 border-pink-300 pl-5 text-base leading-relaxed text-neutral-600">
-                We confront systemic discrimination, legal
-
-                invisibility, forced displacement, homelessness, economic exclusion,
-
-                and shrinking safe spaces, while amplifying silenced voices at the
-
-                center of movement-building.
+                We address gender-based violence, cross-border insecurity, economic marginalization,
+                and legal barriers by offering holistic support, legal advocacy, safe havens, and community-driven empowerment.
               </p>
             </motion.div>
           </div>
 
-          {/* IMAGE COLLAGE 
-            Positioned directly under the main text blocks on mobile screens naturally
-          */}
+          {/* IMAGE COLLAGE */}
           <div className="relative h-125 w-full lg:col-span-6 md:h-150 my-8 lg:my-0 lg:order-1">
             {/* Main Image */}
             <motion.div
@@ -107,8 +96,8 @@ export default function WhoWeAre() {
               className="absolute left-10 top-12 z-10 h-[72%] w-[72%] overflow-hidden rounded-3xl shadow-xl"
             >
               <img
-                src="/images/fp1.jpeg"
-                alt="KNESWO members in solidarity"
+                src="/images/t.jpeg"
+                alt="Survivors Busia community members in solidarity"
                 className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </motion.div>
@@ -122,8 +111,8 @@ export default function WhoWeAre() {
               className="absolute left-0 top-0 z-20 h-[38%] w-[42%] overflow-hidden rounded-2xl border-4 border-white shadow-2xl"
             >
               <img
-                src="/images/FP.jpeg"
-                alt="Community organizing"
+                src="/images/j.jpeg"
+                alt="Community workshop in Busia"
                 className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </motion.div>
@@ -137,8 +126,8 @@ export default function WhoWeAre() {
               className="absolute bottom-6 right-0 z-20 h-[48%] w-[48%] overflow-hidden rounded-2xl border-4 border-white shadow-2xl"
             >
               <img
-                src="/images/fp2.jpeg"
-                alt="Advocacy and leadership"
+                src="/images/k.jpeg"
+                alt="Advocacy and support sessions"
                 className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </motion.div>
@@ -153,10 +142,10 @@ export default function WhoWeAre() {
             >
               <div className="text-center">
                 <div className="text-2xl font-semibold text-[#E63946]">
-                  2022
+                  Busia
                 </div>
                 <div className="text-[10px] uppercase tracking-widest text-neutral-500">
-                  Established
+                  Grassroots Led
                 </div>
               </div>
             </motion.div>
@@ -166,13 +155,11 @@ export default function WhoWeAre() {
             <div className="absolute left-[28%] top-[42%] h-10 w-10 rotate-12 rounded-xl border border-[#E63946]/20" />
           </div>
 
-          {/* CTA ACTION BLOCK
-            Positioned cleanly at the bottom of the column order stack for mobile viewports
-          */}
+          {/* CTA ACTION BLOCK */}
           <div className="w-full lg:col-span-12 flex justify-center pt-4 lg:order-3">
             <Link href="/who-we-are">
               <motion.a
-                onTapStart={handleTap} // Triggers the absolute millisecond the finger touches the screen
+                onTapStart={handleTap}
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 className="group relative inline-flex overflow-hidden rounded-xl bg-neutral-900 px-7 py-4 text-xs font-medium uppercase tracking-[0.18em] text-white transition-all duration-300 hover:shadow-lg w-auto text-center cursor-pointer select-none"
@@ -180,14 +167,12 @@ export default function WhoWeAre() {
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   <Compass
                     size={16}
-                    /* Combines standard desktop hover with the instant mobile tap state */
                     className={`transition-transform duration-300 group-hover:rotate-45 ${isTapped ? "rotate-45" : ""
                       }`}
                   />
                   <span>About Us</span>
                 </span>
 
-                {/* Combines standard desktop hover with the instant mobile tap state */}
                 <div
                   className={`absolute inset-0 bg-[#E63946] transition-transform duration-300 group-hover:translate-y-0 ${isTapped ? "translate-y-0" : "translate-y-full"
                     }`}

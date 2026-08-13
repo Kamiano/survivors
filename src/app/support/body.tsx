@@ -7,7 +7,7 @@ import { Check, Copy, Upload, ShieldCheck, Globe, CreditCard, Info, MessageSquar
 export default function BankTransferSupport() {
   const [copiedField, setCopiedField] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'local' | 'international'>('local');
-  
+
   // Form States integrated with your API structure
   const [formState, setFormState] = useState({ name: "", email: "", reference: "" });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -15,14 +15,14 @@ export default function BankTransferSupport() {
   const [errorMessage, setErrorMessage] = useState("");
 
   const bankDetails = {
-    accountName: "KNESWO INITIATIVE CBO",
-    accountNo: "01102253205001",
+    accountName: "Survivors INITIATIVE CBO",
+    accountNo: "****************",
     bankName: "Cooperative Bank of Kenya",
-    branch: "Ongata Rongai",
-    branchCode: "038",
+    branch: "Busia",
+    branchCode: "040",
     swift: "KCOOKENA", // Corrected official SWIFT (with letter O)
     swiftFull: "KCOOKENAXXX",
-    bankAddressLocal: "P.O.BOX 470-00511 Ongata Rongai, Kenya",
+    bankAddressLocal: "P.O.BOX ************, Kenya",
     bankAddressIntl: "Co-operative House, Haile Selassie Avenue, P.O. Box 48231-00100, Nairobi, Kenya"
   };
 
@@ -42,7 +42,7 @@ export default function BankTransferSupport() {
       name: formState.name,
       email: formState.email,
       subject: `[Donation Receipt Submission] - ${formState.name}`,
-      message: `Hello KNESWO Admin,\n\nI have submitted a direct bank donation. Here are my verification details:\n\n- Donor Name: ${formState.name}\n- Email: ${formState.email}\n- Location Selected: ${activeTab === 'local' ? 'Inside Kenya' : 'Outside Kenya'}\n- Transaction Reference / Receipt Note:\n${formState.reference}\n\nPlease verify this against your bank records.\n\nThank you!`
+      message: `Hello Survivors org Admin,\n\nI have submitted a direct bank donation. Here are my verification details:\n\n- Donor Name: ${formState.name}\n- Email: ${formState.email}\n- Location Selected: ${activeTab === 'local' ? 'Inside Kenya' : 'Outside Kenya'}\n- Transaction Reference / Receipt Note:\n${formState.reference}\n\nPlease verify this against your bank records.\n\nThank you!`
     };
 
     try {
@@ -60,7 +60,7 @@ export default function BankTransferSupport() {
 
       setIsSubmitted(true);
       setFormState({ name: "", email: "", reference: "" });
-      
+
       setTimeout(() => {
         setIsSubmitted(false);
       }, 7000);
@@ -78,7 +78,7 @@ export default function BankTransferSupport() {
       <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-[#E61F72]/5 blur-3xl pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-5xl px-6">
-        
+
         {/* Title and Header Block */}
         <div className="space-y-4 mb-16 text-left">
           <div className="flex items-center gap-3">
@@ -99,9 +99,9 @@ export default function BankTransferSupport() {
 
         {/* Content Layout Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          
+
           {/* Left Block: Bank Details Card */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -113,7 +113,7 @@ export default function BankTransferSupport() {
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <div>
-                <h4 className="font-semibold text-neutral-800 text-lg">Official KNESWO Accounts</h4>
+                <h4 className="font-semibold text-neutral-800 text-lg">Official Survivors org Accounts</h4>
                 <p className="text-xs text-neutral-500 font-light">Verify these details prior to transfer completion</p>
               </div>
             </div>
@@ -123,11 +123,10 @@ export default function BankTransferSupport() {
               <button
                 type="button"
                 onClick={() => setActiveTab('local')}
-                className={`flex-1 py-3 px-4 rounded-xl text-xs md:text-sm font-medium transition-all duration-300 flex items-center justify-center gap-2 ${
-                  activeTab === 'local' 
-                    ? 'bg-white text-neutral-900 shadow-sm font-semibold' 
-                    : 'text-neutral-500 hover:text-neutral-800'
-                }`}
+                className={`flex-1 py-3 px-4 rounded-xl text-xs md:text-sm font-medium transition-all duration-300 flex items-center justify-center gap-2 ${activeTab === 'local'
+                  ? 'bg-white text-neutral-900 shadow-sm font-semibold'
+                  : 'text-neutral-500 hover:text-neutral-800'
+                  }`}
               >
                 <CreditCard className="w-4 h-4" />
                 Inside Kenya
@@ -135,11 +134,10 @@ export default function BankTransferSupport() {
               <button
                 type="button"
                 onClick={() => setActiveTab('international')}
-                className={`flex-1 py-3 px-4 rounded-xl text-xs md:text-sm font-medium transition-all duration-300 flex items-center justify-center gap-2 ${
-                  activeTab === 'international' 
-                    ? 'bg-white text-neutral-900 shadow-sm font-semibold' 
-                    : 'text-neutral-500 hover:text-neutral-800'
-                }`}
+                className={`flex-1 py-3 px-4 rounded-xl text-xs md:text-sm font-medium transition-all duration-300 flex items-center justify-center gap-2 ${activeTab === 'international'
+                  ? 'bg-white text-neutral-900 shadow-sm font-semibold'
+                  : 'text-neutral-500 hover:text-neutral-800'
+                  }`}
               >
                 <Globe className="w-4 h-4" />
                 Outside Kenya (Intl)
@@ -160,7 +158,7 @@ export default function BankTransferSupport() {
                   <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest">Account Number</span>
                   <p className="text-neutral-900 font-bold text-lg md:text-xl mt-1 tracking-wider">{bankDetails.accountNo}</p>
                 </div>
-                <button 
+                <button
                   type="button"
                   onClick={() => handleCopy(bankDetails.accountNo, 'acc')}
                   className="p-3 bg-neutral-50 hover:bg-neutral-100 rounded-xl text-neutral-500 hover:text-[#E63946] transition-all duration-300 shrink-0"
@@ -198,7 +196,7 @@ export default function BankTransferSupport() {
                       <p className="text-neutral-900 font-bold text-sm md:text-base mt-1 tracking-widest">{bankDetails.swift}</p>
                       <span className="text-[10px] text-neutral-400 block mt-1 font-light">Use {bankDetails.swiftFull} if your bank requires 11 characters</span>
                     </div>
-                    <button 
+                    <button
                       type="button"
                       onClick={() => handleCopy(bankDetails.swift, 'swift')}
                       className="p-3 bg-neutral-50 hover:bg-neutral-100 rounded-xl text-neutral-500 hover:text-[#E63946] transition-all duration-300 shrink-0"
@@ -347,7 +345,7 @@ export default function BankTransferSupport() {
                     <div className="space-y-2">
                       <h4 className="text-xl font-bold text-neutral-900">Verification Sent!</h4>
                       <p className="text-sm text-neutral-500 font-light leading-relaxed max-w-sm mx-auto">
-                        Thank you for your generosity! Your donation notification was delivered securely to KNESWO. Our audit team will cross-reference and verify it shortly.
+                        Thank you for your generosity! Your donation notification was delivered securely to Survivors Org. Our audit team will cross-reference and verify it shortly.
                       </p>
                     </div>
                   </motion.div>

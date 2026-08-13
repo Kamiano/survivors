@@ -7,7 +7,6 @@ import Hero from "@/components/Hero";
 import WhoWeAre from "@/components/WhoWeAre";
 import FocusAreas from "@/components/FocusAreas";
 import Impact from "@/components/Impact";
-import FeaturedStory from "@/components/FeaturedStory";
 import CommunityVoices from "@/components/CommunityVoices";
 import LatestNews from "@/components/LatestNews";
 import Footer from "@/components/Footer";
@@ -39,16 +38,13 @@ export default function Home() {
           {/* Section 4: Impact Metrics */}
           <Impact />
 
-          {/* Section 5: Featured Story / Video Preview */}
-          <FeaturedStory />
-
           {/* Section 6: Community Voices Testimonial Slider */}
           <CommunityVoices />
 
           {/* Section 7: Latest News */}
           <LatestNews />
 
-        
+
         </main>
 
         {/* Section 10: Footer */}
