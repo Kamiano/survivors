@@ -8,10 +8,10 @@ const testimonials = [
   {
     id: 1,
     name: "Eric Mwanzia",
-    role: "Human Rights Advocate",
+    role: "Project Management Consultant",
     quote:
-      "Their grassroots leadership along the border creates crucial safe spaces for migrant and border sex workers. They empower communities on the margins to defend their dignity, negotiate safety, and lead human rights advocacy.",
-    image: '/images/mwanzia.jpeg', // Update this path to Eric's image when available
+      "What Survivors of Busia has built at the border is some of the most instrumental grassroots work happening in the sex worker rights space in Kenya today. Busia isn't an easy place to organise — it's a crossing point, where women move in and out with the rhythms of trade and survival, often without documentation or safety nets. This team stepped into that gap and built a consistent, trusted presence for sex workers navigating both Kenyan and cross-border realities — centring migrant and mobile sex workers who so often fall through the cracks of programming built for fixed, urban populations. This work deserves recognition, and it deserves sustained investment.",
+    image: '/images/mwanzia.jpeg',
   }
 ];
 

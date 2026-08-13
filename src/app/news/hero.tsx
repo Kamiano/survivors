@@ -13,7 +13,7 @@ interface PageHeroProps {
 export default function Hero({
   title,
   currentPage,
-  bgImage = "/images/news.jpeg"
+  bgImage = "/images/news.jpg"
 }: PageHeroProps) {
   return (
     <div className="relative w-full h-90 sm:h-96 md:h-110 xl:h-120 overflow-hidden flex items-end pb-8">
@@ -26,8 +26,8 @@ export default function Hero({
 
       {/* Solid Pink Overlay */}
       {/* Premium Brand Overlay */}
-<div className="absolute inset-0 bg-[#E63946]/70" />
-<div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-[#E63946]/70" />
+      <div className="absolute inset-0 bg-black/30" />
       {/* Readability layer */}
       <div className="absolute inset-0 bg-black/10" />
 

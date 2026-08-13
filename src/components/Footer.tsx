@@ -2,11 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Mail, ArrowRight, Loader2, CheckCircle2, MessageSquare } from "lucide-react";
+import { Mail, ArrowRight, Loader2, CheckCircle2 } from "lucide-react";
 import {
   FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
   FaXTwitter,
 } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
@@ -43,7 +41,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative w-full bg-[#87CEFA] text-[#260e10] pt-16 overflow-hidden">
+    <footer className="relative w-full bg-[#FF2A12] text-white pt-16 overflow-hidden">
       {/* Wave Section Divider Layout */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-0 select-none pointer-events-none z-20">
         <svg
@@ -74,8 +72,8 @@ export default function Footer() {
         </svg>
       </div>
 
-      {/* Decorative Brand Watermarks - changed from white to blue-grey */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.03] text-blue-grey-200 select-none">
+      {/* Decorative Brand Watermarks - updated to semi-transparent dark red */}
+      <div className="absolute inset-0 pointer-events-none opacity-20 text-[#D11E07] select-none">
         <div className="absolute top-16 left-20 rotate-12 scale-125">
           <HandIcon />
         </div>
@@ -93,15 +91,15 @@ export default function Footer() {
       <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-12 pt-12 pb-16">
         {/* CENTERED NEWSLETTER SIGNUP */}
         <div className="flex flex-col items-center text-center max-w-2xl mx-auto mb-20 space-y-6">
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-wide text-[#260e10]">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-wide text-white">
             Get Our Newsletter
           </h2>
 
           <form
             onSubmit={handleSubscribe}
-            className="flex w-full items-center rounded-full border border-[#260e10]/30 bg-transparent p-0.5 focus-within:border-[#260e10]/60 transition-colors"
+            className="flex w-full items-center rounded-full border border-white/40 bg-black/10 backdrop-blur-sm p-0.5 focus-within:border-white transition-colors"
           >
-            <div className="flex items-center pl-5 pr-2 text-[#260e10]/70">
+            <div className="flex items-center pl-5 pr-2 text-white/80">
               <Mail size={18} />
             </div>
             <input
@@ -109,18 +107,18 @@ export default function Footer() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter email address"
-              className="w-full bg-transparent py-3.5 text-sm text-[#260e10] placeholder-[#260e10]/60 outline-none italic disabled:opacity-50"
+              className="w-full bg-transparent py-3.5 text-sm text-white placeholder-white/70 outline-none italic disabled:opacity-50"
               required
               disabled={status === "pending"}
             />
             <button
               type="submit"
               disabled={status === "pending"}
-              className="rounded-r-full rounded-l-none bg-[#260e10] px-8 py-3.5 text-sm font-medium text-white hover:bg-[#c9135f] transition-all whitespace-nowrap active:scale-98 font-sans disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 cursor-pointer"
+              className="rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-[#FF2A12] hover:bg-neutral-100 transition-all whitespace-nowrap active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 cursor-pointer shadow-md"
             >
               {status === "pending" ? (
                 <>
-                  <Loader2 size={16} className="animate-spin" />
+                  <Loader2 size={16} className="animate-spin text-[#FF2A12]" />
                   <span>Subscribing...</span>
                 </>
               ) : (
@@ -136,7 +134,7 @@ export default function Footer() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
-                className="flex items-center gap-2 text-emerald-300 text-sm font-medium bg-emerald-950/40 border border-emerald-500/30 px-5 py-2.5 rounded-full"
+                className="flex items-center gap-2 text-white text-sm font-medium bg-emerald-900/60 border border-emerald-400/40 px-5 py-2.5 rounded-full"
               >
                 <CheckCircle2 size={16} />
                 <span>Success! You have been added to our newsletter list.</span>
@@ -148,7 +146,7 @@ export default function Footer() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
-                className="text-rose-200 text-sm font-medium bg-rose-950/40 border border-rose-500/30 px-5 py-2.5 rounded-full"
+                className="text-white text-sm font-medium bg-black/40 border border-white/30 px-5 py-2.5 rounded-full"
               >
                 {errorMessage}
               </motion.div>
@@ -163,40 +161,39 @@ export default function Footer() {
             <img
               src="/images/logo.png"
               alt="Survivors org Logo"
-              className="max-h-24 w-auto object-contain"
+              className="max-h-24 w-auto object-contain brightness-0 invert"
             />
             {/* Social Media Links Layout */}
-            <div className="flex items-center gap-4 text-[#260e10]/80">
+            <div className="flex items-center gap-4 text-white/80">
               <a
                 href="https://web.facebook.com/profile.php?id=100086390283233"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-blue-grey-600 transition-colors"
+                className="hover:text-white transition-colors p-2 bg-black/10 rounded-full hover:bg-black/20"
                 title="Facebook"
               >
-                <FaFacebookF size={20} />
+                <FaFacebookF size={18} />
               </a>
 
               <a
                 href="https://x.com/survivorsbusia?lang=bg"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-blue-grey-600 transition-colors"
+                className="hover:text-white transition-colors p-2 bg-black/10 rounded-full hover:bg-black/20"
                 title="X (Twitter)"
               >
-                <FaXTwitter size={20} />
+                <FaXTwitter size={18} />
               </a>
-
             </div>
           </div>
 
           {/* COLUMN 2: TITLE & CONTACT INFO */}
           <div className="md:col-span-3 space-y-5 text-sm">
-            <h3 className="font-bold text-lg leading-snug text-[#260e10] tracking-wide">
+            <h3 className="font-bold text-lg leading-snug text-white tracking-wide">
               Survivors Organization
             </h3>
 
-            <div className="space-y-3 pt-1 text-[#260e10] font-normal">
+            <div className="space-y-3 pt-1 text-white/90 font-normal">
               <p>
                 <span className="font-bold mr-1">Email:</span>
                 <a href="mailto:info@survivors.or.ke" className="hover:underline">
@@ -218,16 +215,16 @@ export default function Footer() {
 
           {/* COLUMN 3: ABOUT US */}
           <div className="md:col-span-3 space-y-4 md:pl-8">
-            <h3 className="font-bold text-lg text-[#260e10] tracking-wide">
+            <h3 className="font-bold text-lg text-white tracking-wide">
               About Us
             </h3>
-            <ul className="space-y-3 text-sm text-[#260e10]">
+            <ul className="space-y-3 text-sm text-white/90">
               <li>
                 <Link
                   href="/who-we-are"
                   className="group flex items-center gap-2 hover:underline"
                 >
-                  <ArrowRight size={16} className="text-[#260e10] shrink-0" />
+                  <ArrowRight size={16} className="text-white shrink-0" />
                   <span>Who We Are</span>
                 </Link>
               </li>
@@ -236,7 +233,7 @@ export default function Footer() {
                   href="/contact"
                   className="group flex items-center gap-2 hover:underline"
                 >
-                  <ArrowRight size={16} className="text-[#260e10] shrink-0" />
+                  <ArrowRight size={16} className="text-white shrink-0" />
                   <span>Contact Us</span>
                 </Link>
               </li>
@@ -245,7 +242,7 @@ export default function Footer() {
                   href="#"
                   className="group flex items-center gap-2 hover:underline"
                 >
-                  <ArrowRight size={16} className="text-[#260e10] shrink-0" />
+                  <ArrowRight size={16} className="text-white shrink-0" />
                   <span>Our Team</span>
                 </Link>
               </li>
@@ -254,47 +251,46 @@ export default function Footer() {
 
           {/* COLUMN 4: OUR PRIORITIES */}
           <div className="md:col-span-3 space-y-4">
-            <h3 className="font-bold text-lg text-[#260e10] tracking-wide">
+            <h3 className="font-bold text-lg text-white tracking-wide">
               Our Priorities
             </h3>
-            <ul className="space-y-3 text-sm text-[#260e10]">
+            <ul className="space-y-3 text-sm text-white/90">
               <li>
                 <Link
-                  href="/advocacy"
+                  href="health"
                   className="group flex items-center gap-2 hover:underline"
                 >
-                  <ArrowRight size={16} className="text-[#260e10] shrink-0" />
+                  <ArrowRight size={16} className="text-white shrink-0" />
                   <span>Expand Health and Wellness Response</span>
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/climate"
+                  href="/rights"
                   className="group flex items-center gap-2 hover:underline"
                 >
-                  <ArrowRight size={16} className="text-[#260e10] shrink-0" />
+                  <ArrowRight size={16} className="text-white shrink-0" />
                   <span>Promote and Protect the Rights of Key Population</span>
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/health"
+                  href="/livelihoods"
                   className="group flex items-center gap-2 hover:underline"
                 >
-                  <ArrowRight size={16} className="text-[#260e10] shrink-0" />
+                  <ArrowRight size={16} className="text-white shrink-0" />
                   <span>Expand Livelihoods Options for Key Population</span>
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/crisis"
+                  href="/organizational"
                   className="group flex items-center gap-2 hover:underline"
                 >
-                  <ArrowRight size={16} className="text-[#260e10] shrink-0" />
+                  <ArrowRight size={16} className="text-white shrink-0" />
                   <span>Organizational Strengthening and Sustainability</span>
                 </Link>
               </li>
-
             </ul>
           </div>
         </div>
@@ -303,7 +299,6 @@ export default function Footer() {
   );
 }
 
-{/* Cleaned up structural Hand Vector Asset */ }
 function HandIcon() {
   return (
     <svg

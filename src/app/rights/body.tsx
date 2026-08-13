@@ -22,17 +22,12 @@ export default function RightsProtectionCampaign() {
           {/* Left Side: Image & Priority Focus Text */}
           <div className="lg:col-span-7 flex flex-col gap-6">
             <div className="flex flex-col gap-2">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#E30613]">
-                Priority Program 02
-              </span>
-              <h2 className="text-3xl md:text-4xl font-black text-neutral-900 uppercase tracking-tight">
-                Promote & Protect Rights
-              </h2>
+
             </div>
 
             <div className="w-full max-w-xl overflow-hidden shadow-md rounded-sm">
               <img
-                src="/images/fm2.jpeg"
+                src="/images/show.jpeg"
                 alt="Advocacy and rights protection community forum"
                 className="w-full aspect-4/3 object-cover"
               />

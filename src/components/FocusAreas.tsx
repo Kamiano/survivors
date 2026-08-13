@@ -11,7 +11,7 @@ const focusAreas = [
   },
   {
     title: "Promote and Protect the Rights of Key Population",
-    image: "/images/kp.jpeg",
+    image: "/images/police.jpeg",
     href: "/feminist",
   },
   {

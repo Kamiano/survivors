@@ -22,17 +22,13 @@ export default function LivelihoodsCampaignSection() {
           {/* Left Side: Image & Description Text */}
           <div className="lg:col-span-7 flex flex-col gap-6">
             <div className="flex flex-col gap-2">
-              <span className="text-xs font-bold uppercase tracking-widest text-blue-600">
-                Priority Program 03
-              </span>
-              <h2 className="text-3xl md:text-4xl font-black text-neutral-900 uppercase tracking-tight">
-                Expand Livelihood Options
-              </h2>
+
+
             </div>
 
             <div className="w-full max-w-xl overflow-hidden shadow-md rounded-sm">
               <img
-                src="/images/plan.jpg"
+                src="/images/life.jpg"
                 alt="Economic empowerment and livelihoods workshop"
                 className="w-full aspect-4/3 object-cover"
               />
@@ -45,7 +41,7 @@ export default function LivelihoodsCampaignSection() {
 
           {/* Right Side: Blue Donation Campaign Card */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="w-full max-w-[320px] bg-blue-600 text-white rounded-[2.25rem] shadow-2xl overflow-hidden flex flex-col justify-between min-h-87.5 transform transition-transform hover:-translate-y-1 duration-300">
+            <div className="w-full max-w-[320px] bg-[#E30613] text-white rounded-[2.25rem] shadow-2xl overflow-hidden flex flex-col justify-between min-h-87.5 transform transition-transform hover:-translate-y-1 duration-300">
 
               {/* Main Card Content */}
               <div className="p-6 md:p-8 grow">
@@ -63,7 +59,7 @@ export default function LivelihoodsCampaignSection() {
                 </div>
 
                 {/* Progress Bar Track */}
-                <div className="relative w-full h-4 bg-blue-950/30 rounded-full overflow-hidden shadow-inner">
+                <div className="relative w-full h-4 bg-black/20 rounded-full overflow-hidden shadow-inner">
                   {/* Yellow progress fill */}
                   <div
                     className="h-full bg-[#FFD000] rounded-full transition-all duration-700 ease-out"
@@ -78,7 +74,7 @@ export default function LivelihoodsCampaignSection() {
               </div>
 
               {/* Dynamic Animated Action Button Strip */}
-              <button className="group relative w-full bg-blue-800 hover:bg-neutral-900 text-white transition-all duration-300 py-4 text-center font-bold tracking-wider text-sm flex items-center justify-center gap-2 border-t border-blue-500/30 hover:border-transparent overflow-hidden">
+              <button className="group relative w-full bg-black/30 hover:bg-neutral-900 text-white transition-all duration-300 py-4 text-center font-bold tracking-wider text-sm flex items-center justify-center gap-2 border-t border-blue-500/30 hover:border-transparent overflow-hidden">
                 {/* Micro-interaction highlight overlay effect */}
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
 

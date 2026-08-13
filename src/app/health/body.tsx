@@ -22,17 +22,13 @@ export default function HealthWellnessCampaign() {
           {/* Left Side: Image & Priority Focus Text */}
           <div className="lg:col-span-7 flex flex-col gap-6">
             <div className="flex flex-col gap-2">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#E30613]">
-                Priority Program 01
-              </span>
-              <h2 className="text-3xl md:text-4xl font-black text-neutral-900 uppercase tracking-tight">
-                Expand Health & Wellness Response
-              </h2>
+
+
             </div>
 
             <div className="w-full max-w-xl overflow-hidden shadow-md rounded-sm">
               <img
-                src="/images/sx1.jpeg"
+                src="/images/hosi.jpeg"
                 alt="Community health outreach and engagement"
                 className="w-full aspect-4/3 object-cover"
               />
