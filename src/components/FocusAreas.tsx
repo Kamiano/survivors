@@ -10,7 +10,7 @@ const focusAreas = [
     href: "/health",
   },
   {
-    title: "Promote and Protect the Rights of Key Population",
+    title: "Promote and Protect the Rights of Sex Workers",
     image: "/images/police.jpeg",
     href: "/feminist",
   },

@@ -35,7 +35,7 @@ export default function OrganizationalStrengtheningSection() {
             </div>
 
             <p className="text-neutral-700 leading-relaxed text-base md:text-lg">
-              We focus on building a robust, resilient, and community-led institution capable of driving long-term impact across the Western region. Through institutional capacity building, enhanced governance, strategic resource mobilization, and continuous leadership development, we ensure our organization remains sustainable, accountable, and steadfast in serving key populations.
+              We focus on building a robust, resilient, and community-led institution capable of driving long-term impact across the region. Through institutional capacity building, enhanced governance, strategic resource mobilization, and continuous leadership development, we ensure our organization remains sustainable, accountable, and steadfast in serving key populations.
             </p>
           </div>
 

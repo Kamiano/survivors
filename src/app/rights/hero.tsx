@@ -47,7 +47,7 @@ export default function Hero({
           {/* Specific Section Heading */}
           <div className="flex flex-col w-fit">
             <h1 className="text-3xl md:text-4xl font-bold text-white tracking-wide uppercase leading-tight">
-              Promote and Protect the Rights of Key Population
+              Promote and Protect the Rights of Sex Workers
             </h1>
 
             {/* Shortened underline */}

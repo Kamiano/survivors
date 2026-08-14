@@ -34,7 +34,7 @@ export default function RightsProtectionCampaign() {
             </div>
 
             <p className="text-neutral-700 leading-relaxed text-base md:text-lg">
-              We actively champion a social, legal, and political environment where key populations enjoy full human rights, dignity, and freedom from violence or discriminatory practices. Through targeted advocacy, public tolerance drives, and capacity building across the Western region, we empower community members to know their rights, challenge systemic barriers, and lead grassroots advocacy efforts for lasting legal and social protection.
+              We actively champion a social, legal, and political environment where sex workers enjoy full human rights, dignity, and freedom from violence or discriminatory practices. Through targeted advocacy, public tolerance drives, and capacity building across the region, we empower community members to know their rights, challenge systemic barriers, and lead grassroots advocacy efforts for lasting legal and social protection.
             </p>
           </div>
 
