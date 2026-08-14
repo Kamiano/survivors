@@ -12,17 +12,17 @@ const focusAreas = [
   {
     title: "Promote and Protect the Rights of Sex Workers",
     image: "/images/police.jpeg",
-    href: "/feminist",
+    href: "/rights",
   },
   {
     title: "Expand Livelihoods Options for Key Population",
     image: "/images/feed.jpg",
-    href: "/crisis",
+    href: "/livelihoods",
   },
   {
     title: "Organizational Strengthening and Sustainability",
     image: "/images/group.jpg",
-    href: "/climate",
+    href: "/organizational",
   },
 ];
 
