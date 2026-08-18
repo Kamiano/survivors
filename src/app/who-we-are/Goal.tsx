@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { 
-  ShieldCheck, 
-  HeartPulse, 
-  Scale, 
-  TrendingUp, 
-  Sparkles, 
-  Award, 
-  Globe2 
+import {
+  ShieldCheck,
+  HeartPulse,
+  Scale,
+  TrendingUp,
+  Sparkles,
+  Award,
+  Globe2
 } from "lucide-react";
 
 interface OutcomeItem {
@@ -67,7 +67,7 @@ const ULTIMATE_OUTCOMES: OutcomeItem[] = [
   {
     id: "key-populations",
     title: "Thriving Communities",
-    description: "Measurably improved livelihoods and security for key populations.",
+    description: "Measurably improved livelihoods and security for sex workers.",
     icon: Sparkles,
   },
 ];

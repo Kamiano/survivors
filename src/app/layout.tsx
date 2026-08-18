@@ -18,11 +18,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Survivors Organization",
-  description: "A community-led organization working alongside key populations and marginalized communities in Kenya to advance justice, health access, rights, and economic empowerment.",
+  description: "A community-led organization working alongside sex workers and marginalized communities in Kenya to advance justice, health access, rights, and economic empowerment.",
   keywords: [
     "Community Advocacy Kenya",
     "Human Rights Kenya",
-    "Key Populations Support",
+    "Sex Workers Support",
     "Economic Empowerment",
     "Health Rights",
     "Social Justice Kenya"

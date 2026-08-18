@@ -15,7 +15,7 @@ const focusAreas = [
     href: "/rights",
   },
   {
-    title: "Expand Livelihoods Options for Key Population",
+    title: "Expand Livelihoods Options for Sex Workers",
     image: "/images/feed.jpg",
     href: "/livelihoods",
   },
@@ -23,6 +23,16 @@ const focusAreas = [
     title: "Organizational Strengthening and Sustainability",
     image: "/images/group.jpg",
     href: "/organizational",
+  },
+  {
+    title: "Sexual and Reproductive Health and Rights",
+    image: "/images/sex.jpg",
+    href: "/sexual",
+  },
+  {
+    title: "Mental Well being of Sex Workers",
+    image: "/images/ment.jpg",
+    href: "/mental",
   },
 ];
 

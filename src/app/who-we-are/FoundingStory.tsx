@@ -84,7 +84,7 @@ export default function FoundingStory() {
             </p>
 
             <p>
-              When research revealed widespread lack of information on HIV transmission in the border town, the organization led peer education initiatives across key populations. Over the years, this evolved into robust community advocacy: expanding HTS services, managing continuous condom distribution, offering support groups for those living with or affected by HIV/AIDS, and integrating screening and referrals for TB and Malaria.
+              When research revealed widespread lack of information on HIV transmission in the border town, the organization led peer education initiatives across sex workers. Over the years, this evolved into robust community advocacy: expanding HTS services, managing continuous condom distribution, offering support groups for those living with or affected by HIV/AIDS, and integrating screening and referrals for TB and Malaria.
             </p>
           </motion.div>
         </motion.div>
@@ -93,7 +93,7 @@ export default function FoundingStory() {
   );
 }
 
-{/* SVG 1: Route Node Watermark (symbolizes transit highway connection) */}
+{/* SVG 1: Route Node Watermark (symbolizes transit highway connection) */ }
 function RouteNodeIcon() {
   return (
     <svg
@@ -113,7 +113,7 @@ function RouteNodeIcon() {
   );
 }
 
-{/* SVG 2: Shield Heart Watermark (symbolizes protection and care) */}
+{/* SVG 2: Shield Heart Watermark (symbolizes protection and care) */ }
 function ShieldHeartIcon() {
   return (
     <svg

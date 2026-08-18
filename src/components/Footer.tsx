@@ -161,7 +161,7 @@ export default function Footer() {
             <img
               src="/images/logo.png"
               alt="Survivors org Logo"
-              className="max-h-24 w-auto object-contain brightness-0 invert"
+              className="max-h-24 w-auto object-contain "
             />
             {/* Social Media Links Layout */}
             <div className="flex items-center gap-4 text-white/80">
@@ -270,7 +270,7 @@ export default function Footer() {
                   className="group flex items-center gap-2 hover:underline"
                 >
                   <ArrowRight size={16} className="text-white shrink-0" />
-                  <span>Promote and Protect the Rights of Key Population</span>
+                  <span>Promote and Protect the Rights of Sex Workers</span>
                 </Link>
               </li>
               <li>
@@ -279,7 +279,7 @@ export default function Footer() {
                   className="group flex items-center gap-2 hover:underline"
                 >
                   <ArrowRight size={16} className="text-white shrink-0" />
-                  <span>Expand Livelihoods Options for Key Population</span>
+                  <span>Expand Livelihoods Options for Sex Workers</span>
                 </Link>
               </li>
               <li>
@@ -289,6 +289,24 @@ export default function Footer() {
                 >
                   <ArrowRight size={16} className="text-white shrink-0" />
                   <span>Organizational Strengthening and Sustainability</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/sexual"
+                  className="group flex items-center gap-2 hover:underline"
+                >
+                  <ArrowRight size={16} className="text-white shrink-0" />
+                  <span>Sexual and Reproductive Health and Rights</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/mental"
+                  className="group flex items-center gap-2 hover:underline"
+                >
+                  <ArrowRight size={16} className="text-white shrink-0" />
+                  <span>Mental Well being of Sex Workers</span>
                 </Link>
               </li>
             </ul>

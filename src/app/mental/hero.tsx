@@ -5,23 +5,24 @@ import { ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface PageHeroProps {
-    title?: string;
-    currentPage?: string;
+    title: string;
+    currentPage: string;
     bgImage?: string;
 }
 
 export default function Hero({
-    title = "Explore our vision and roadmap for empowering communities.",
-    currentPage = "Strategic Plan",
-    bgImage = "/images/one.jpeg"
+    title,
+    currentPage,
+    bgImage = "/images/mental.jpg"
 }: PageHeroProps) {
     return (
-        <div className="relative w-full h-[75vh] overflow-hidden flex items-end pb-8">
+        <div className="relative w-full h-90 sm:h-96 md:h-110 xl:h-135 overflow-hidden flex items-end pb-8">
 
             {/* 
         EMULATED BACKGROUND POSITIONING:
-        - Keeps `bg-cover` to guarantee the image fills 100% of the workspace.
-        - Employs `bg-top lg:bg-[center_top_15%]` to ensure that essential subjects do not crop out on large displays.
+        - Retains `bg-cover` ensuring edge-to-edge frame saturation without whitespace.
+        - Anchors focus using `bg-top lg:bg-[center_top_15%]` to keep central visual assets intact on ultrawide monitors.
+        - Matches the standardized layout height `xl:h-135`.
       */}
             <div
                 className="absolute inset-0 bg-cover bg-top lg:bg-position-[center_top_15%] bg-no-repeat transition-all duration-300"
@@ -46,7 +47,7 @@ export default function Hero({
                     {/* Specific Section Heading */}
                     <div className="flex flex-col w-fit">
                         <h1 className="text-3xl md:text-4xl font-bold text-white tracking-wide uppercase leading-tight">
-                            Our Strategic Plan
+                            Mental Well-being of Sex Workers
                         </h1>
 
                         {/* Shortened underline */}

@@ -2,34 +2,38 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Check, Copy, Upload, ShieldCheck, Globe, CreditCard, Info, MessageSquare, CheckCircle2 } from "lucide-react";
+import { Check, Copy, ShieldCheck, Globe, CreditCard, Info, MessageSquare, CheckCircle2 } from "lucide-react";
 
 export default function BankTransferSupport() {
   const [copiedField, setCopiedField] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'local' | 'international'>('local');
 
-  // Form States integrated with your API structure
   const [formState, setFormState] = useState({ name: "", email: "", reference: "" });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isPending, setIsPending] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
   const bankDetails = {
-    accountName: "Survivors INITIATIVE CBO",
-    accountNo: "****************",
-    bankName: "Cooperative Bank of Kenya",
-    branch: "Busia",
+    accountName: "Survivors Self Help Group",
+    accountNo: "01134238130700",
+    bankName: "Co-operative Bank of Kenya",
+    branch: "Busia Branch",
     branchCode: "040",
-    swift: "KCOOKENA", // Corrected official SWIFT (with letter O)
+    currency: "KES",
+    swift: "KCOOKENA",
     swiftFull: "KCOOKENAXXX",
-    bankAddressLocal: "P.O.BOX ************, Kenya",
+    bankAddressLocal: "P.O. BOX 326, Busia, Kenya - 50400",
     bankAddressIntl: "Co-operative House, Haile Selassie Avenue, P.O. Box 48231-00100, Nairobi, Kenya"
   };
 
-  const handleCopy = (text: string, field: string) => {
-    navigator.clipboard.writeText(text);
-    setCopiedField(field);
-    setTimeout(() => setCopiedField(null), 2000);
+  const handleCopy = async (text: string, field: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedField(field);
+      setTimeout(() => setCopiedField(null), 2000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -37,12 +41,11 @@ export default function BankTransferSupport() {
     setIsPending(true);
     setErrorMessage("");
 
-    // Prepare content for your existing `/api/contact` API
     const donationPayload = {
       name: formState.name,
       email: formState.email,
       subject: `[Donation Receipt Submission] - ${formState.name}`,
-      message: `Hello Survivors org Admin,\n\nI have submitted a direct bank donation. Here are my verification details:\n\n- Donor Name: ${formState.name}\n- Email: ${formState.email}\n- Location Selected: ${activeTab === 'local' ? 'Inside Kenya' : 'Outside Kenya'}\n- Transaction Reference / Receipt Note:\n${formState.reference}\n\nPlease verify this against your bank records.\n\nThank you!`
+      message: `Hello Admin,\n\nI have submitted a direct bank donation. Here are my verification details:\n\n- Donor Name: ${formState.name}\n- Email: ${formState.email}\n- Location Selected: ${activeTab === 'local' ? 'Inside Kenya' : 'Outside Kenya'}\n- Transaction Reference / Receipt Note:\n${formState.reference}\n\nPlease verify this against your bank records.\n\nThank you!`
     };
 
     try {
@@ -64,8 +67,12 @@ export default function BankTransferSupport() {
       setTimeout(() => {
         setIsSubmitted(false);
       }, 7000);
-    } catch (error: any) {
-      setErrorMessage(error.message || "An unexpected error occurred.");
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        setErrorMessage(error.message);
+      } else {
+        setErrorMessage("An unexpected error occurred.");
+      }
     } finally {
       setIsPending(false);
     }
@@ -73,13 +80,10 @@ export default function BankTransferSupport() {
 
   return (
     <section className="relative bg-white py-20 md:py-28 overflow-hidden font-sans">
-      {/* Decorative Blur Gradients matching your Contact page */}
       <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-[#E63946]/5 blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-[#E61F72]/5 blur-3xl pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-5xl px-6">
-
-        {/* Title and Header Block */}
         <div className="space-y-4 mb-16 text-left">
           <div className="flex items-center gap-3">
             <div className="h-px w-8 bg-[#E63946]" />
@@ -97,9 +101,7 @@ export default function BankTransferSupport() {
           </p>
         </div>
 
-        {/* Content Layout Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-
           {/* Left Block: Bank Details Card */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -113,19 +115,18 @@ export default function BankTransferSupport() {
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <div>
-                <h4 className="font-semibold text-neutral-800 text-lg">Official Survivors org Accounts</h4>
+                <h4 className="font-semibold text-neutral-800 text-lg">Official Accounts</h4>
                 <p className="text-xs text-neutral-500 font-light">Verify these details prior to transfer completion</p>
               </div>
             </div>
 
-            {/* Local vs. International Toggle Tabs */}
             <div className="flex bg-neutral-100/70 p-1 rounded-2xl mb-8">
               <button
                 type="button"
                 onClick={() => setActiveTab('local')}
                 className={`flex-1 py-3 px-4 rounded-xl text-xs md:text-sm font-medium transition-all duration-300 flex items-center justify-center gap-2 ${activeTab === 'local'
-                  ? 'bg-white text-neutral-900 shadow-sm font-semibold'
-                  : 'text-neutral-500 hover:text-neutral-800'
+                    ? 'bg-white text-neutral-900 shadow-sm font-semibold'
+                    : 'text-neutral-500 hover:text-neutral-800'
                   }`}
               >
                 <CreditCard className="w-4 h-4" />
@@ -135,8 +136,8 @@ export default function BankTransferSupport() {
                 type="button"
                 onClick={() => setActiveTab('international')}
                 className={`flex-1 py-3 px-4 rounded-xl text-xs md:text-sm font-medium transition-all duration-300 flex items-center justify-center gap-2 ${activeTab === 'international'
-                  ? 'bg-white text-neutral-900 shadow-sm font-semibold'
-                  : 'text-neutral-500 hover:text-neutral-800'
+                    ? 'bg-white text-neutral-900 shadow-sm font-semibold'
+                    : 'text-neutral-500 hover:text-neutral-800'
                   }`}
               >
                 <Globe className="w-4 h-4" />
@@ -144,18 +145,15 @@ export default function BankTransferSupport() {
               </button>
             </div>
 
-            {/* Details Fields */}
             <div className="space-y-6">
-              {/* Account Name */}
               <div className="pb-4 border-b border-neutral-100">
                 <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest">Account Name</span>
                 <p className="text-neutral-800 font-semibold mt-1 text-sm md:text-base tracking-wide">{bankDetails.accountName}</p>
               </div>
 
-              {/* Account Number with Clipboard Action */}
               <div className="pb-4 border-b border-neutral-100 flex justify-between items-center gap-4">
                 <div>
-                  <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest">Account Number</span>
+                  <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest">Account Number ({bankDetails.currency})</span>
                   <p className="text-neutral-900 font-bold text-lg md:text-xl mt-1 tracking-wider">{bankDetails.accountNo}</p>
                 </div>
                 <button
@@ -168,7 +166,6 @@ export default function BankTransferSupport() {
                 </button>
               </div>
 
-              {/* Bank Name */}
               <div className="pb-4 border-b border-neutral-100">
                 <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest">Bank Name</span>
                 <p className="text-neutral-800 font-medium mt-1 text-sm md:text-base">{bankDetails.bankName}</p>
@@ -177,9 +174,9 @@ export default function BankTransferSupport() {
               {activeTab === 'local' ? (
                 <>
                   <div className="pb-4 border-b border-neutral-100">
-                    <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest">Branch Name & Code</span>
+                    <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest">Branch</span>
                     <p className="text-neutral-800 font-medium mt-1 text-sm md:text-base">
-                      {bankDetails.branch} (Branch Code: {bankDetails.branchCode})
+                      {bankDetails.branch}
                     </p>
                   </div>
                   <div>
@@ -189,10 +186,9 @@ export default function BankTransferSupport() {
                 </>
               ) : (
                 <>
-                  {/* Corrected SWIFT block with Clipboard Action */}
                   <div className="pb-4 border-b border-neutral-100 flex justify-between items-center gap-4">
                     <div>
-                      <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest">SWIFT Code / BIC</span>
+                      <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest">SWIFT / BIC Code</span>
                       <p className="text-neutral-900 font-bold text-sm md:text-base mt-1 tracking-widest">{bankDetails.swift}</p>
                       <span className="text-[10px] text-neutral-400 block mt-1 font-light">Use {bankDetails.swiftFull} if your bank requires 11 characters</span>
                     </div>
@@ -217,14 +213,13 @@ export default function BankTransferSupport() {
               )}
             </div>
 
-            {/* International Wire Warning/Remittance Suggestion */}
             {activeTab === 'international' && (
               <div className="mt-8 p-5 bg-neutral-50 border border-neutral-100 rounded-2xl flex gap-3.5">
                 <Info className="w-5 h-5 text-[#E63946] shrink-0 mt-0.5" />
                 <div className="space-y-1">
                   <h5 className="text-[10px] font-bold uppercase tracking-wider text-neutral-800">Note for International Donors</h5>
                   <p className="text-xs text-neutral-600 leading-relaxed font-light">
-                    To bypass hefty wire transfer fees (which can reach up to $50 per transaction), we recommend using global modern remittance services such as <strong>Wise</strong>, <strong>Remitly</strong>, or <strong>WorldRemit</strong>. These let you deposit directly into our Co-operative Bank account instantly and securely with very minimal rates.
+                    To bypass hefty wire transfer fees, we recommend using modern remittance platforms like <strong>Wise</strong>, <strong>Remitly</strong>, or <strong>WorldRemit</strong>. These permit direct deposits into our Co-operative Bank account quickly and securely at minimal exchange rates.
                   </p>
                 </div>
               </div>
@@ -252,11 +247,10 @@ export default function BankTransferSupport() {
                     <div className="space-y-1">
                       <h4 className="font-semibold text-neutral-800 text-base md:text-lg">Thank You for Your Support!</h4>
                       <p className="text-xs text-neutral-500 font-light leading-relaxed">
-                        We are incredibly grateful for your generosity. Please drop your details here so we can personally verify your transfer, ensure your gift goes directly to our community programs, and reach out to thank you properly!
+                        We are deeply grateful for your support. Share your transaction details here so we can verify your transfer and confirm receipt.
                       </p>
                     </div>
 
-                    {/* Name Input - Matching Contact styling */}
                     <div className="relative z-0 w-full group">
                       <input
                         type="text"
@@ -267,12 +261,11 @@ export default function BankTransferSupport() {
                         className="block py-3 px-0 w-full text-sm text-neutral-900 bg-transparent border-0 border-b-2 border-neutral-200 appearance-none focus:outline-none focus:ring-0 focus:border-[#E63946] transition-colors duration-300 peer disabled:opacity-50"
                         placeholder=" "
                       />
-                      <label className="peer-focus:font-medium absolute text-sm text-neutral-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-left peer-focus:left-0 peer-focus:text-[#E63946] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:translate-y-6">
+                      <label className="peer-focus:font-medium absolute text-sm text-neutral-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-left peer-focus:left-0 peer-focus:text-[#E63946] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
                         Your Full Name
                       </label>
                     </div>
 
-                    {/* Email Input - Matching Contact styling */}
                     <div className="relative z-0 w-full group">
                       <input
                         type="email"
@@ -283,12 +276,11 @@ export default function BankTransferSupport() {
                         className="block py-3 px-0 w-full text-sm text-neutral-900 bg-transparent border-0 border-b-2 border-neutral-200 appearance-none focus:outline-none focus:ring-0 focus:border-[#E63946] transition-colors duration-300 peer disabled:opacity-50"
                         placeholder=" "
                       />
-                      <label className="peer-focus:font-medium absolute text-sm text-neutral-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-left peer-focus:left-0 peer-focus:text-[#E63946] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:translate-y-6">
+                      <label className="peer-focus:font-medium absolute text-sm text-neutral-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-left peer-focus:left-0 peer-focus:text-[#E63946] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
                         Email Address
                       </label>
                     </div>
 
-                    {/* Transaction Reference / Memo Text Area */}
                     <div className="relative z-0 w-full group">
                       <textarea
                         rows={3}
@@ -299,7 +291,7 @@ export default function BankTransferSupport() {
                         className="block py-3 px-0 w-full text-sm text-neutral-900 bg-transparent border-0 border-b-2 border-neutral-200 appearance-none focus:outline-none focus:ring-0 focus:border-[#E63946] transition-colors duration-300 resize-none peer disabled:opacity-50"
                         placeholder=" "
                       />
-                      <label className="peer-focus:font-medium absolute text-sm text-neutral-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-left peer-focus:left-0 peer-focus:text-[#E63946] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:translate-y-6">
+                      <label className="peer-focus:font-medium absolute text-sm text-neutral-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-left peer-focus:left-0 peer-focus:text-[#E63946] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
                         Transaction Ref / Bank Code / Message...
                       </label>
                     </div>
@@ -310,7 +302,6 @@ export default function BankTransferSupport() {
                       </p>
                     )}
 
-                    {/* Action Button - Brand Matched */}
                     <div className="pt-2">
                       <motion.button
                         whileHover={!isPending ? { y: -2 } : {}}
@@ -332,7 +323,6 @@ export default function BankTransferSupport() {
                     </div>
                   </motion.form>
                 ) : (
-                  /* Success Notification Layout - Matches style and animations of contact page */
                   <motion.div
                     key="success-state"
                     initial={{ opacity: 0, scale: 0.95 }}
@@ -345,7 +335,7 @@ export default function BankTransferSupport() {
                     <div className="space-y-2">
                       <h4 className="text-xl font-bold text-neutral-900">Verification Sent!</h4>
                       <p className="text-sm text-neutral-500 font-light leading-relaxed max-w-sm mx-auto">
-                        Thank you for your generosity! Your donation notification was delivered securely to Survivors Org. Our audit team will cross-reference and verify it shortly.
+                        Thank you for your generosity! Your donation notification was delivered securely. The team will cross-reference and verify it shortly.
                       </p>
                     </div>
                   </motion.div>
@@ -353,9 +343,7 @@ export default function BankTransferSupport() {
               </AnimatePresence>
             </motion.div>
           </div>
-
         </div>
-
       </div>
     </section>
   );

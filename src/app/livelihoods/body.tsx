@@ -35,7 +35,7 @@ export default function LivelihoodsCampaignSection() {
             </div>
 
             <p className="text-neutral-700 leading-relaxed text-base md:text-lg">
-              We empower community members by expanding sustainable livelihood options and fostering economic self-reliance. Through financial literacy training, vocational skill development, micro-enterprise support, and capacity building across the region, we enable key populations to build independent futures and achieve long-term economic stability.
+              We empower community members by expanding sustainable livelihood options and fostering economic self-reliance. Through financial literacy training, vocational skill development, micro-enterprise support, and capacity building across the region, we enable sex workers to build independent futures and achieve long-term economic stability.
             </p>
           </div>
 

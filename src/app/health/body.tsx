@@ -35,7 +35,7 @@ export default function HealthWellnessCampaign() {
             </div>
 
             <p className="text-neutral-700 leading-relaxed text-base md:text-lg">
-              Survivors Organization works to expand comprehensive, integrated health and wellness services tailored for key populations across the region. Our focus centres on HIV/AIDS awareness and peer education, mobilising HTS services, continuous condom distribution to prevent STI transmission, and establishing support groups for those infected and affected. We also advocate for integrated TB and Malaria screenings, ensuring accessible, dignified, and stigma-free healthcare for all members.
+              Survivors Organization works to expand comprehensive, integrated health and wellness services tailored for sex workers across the region. Our focus centres on HIV/AIDS awareness and peer education, mobilising HTS services, continuous condom distribution to prevent STI transmission, and establishing support groups for those infected and affected. We also advocate for integrated TB and Malaria screenings, ensuring accessible, dignified, and stigma-free healthcare for all members.
             </p>
           </div>
 

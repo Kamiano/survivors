@@ -26,10 +26,9 @@ export default function Hero({
 
       {/* Solid Pink Overlay */}
       {/* Premium Brand Overlay */}
-      <div className="absolute inset-0 bg-[#E63946]/70" />
-      <div className="absolute inset-0 bg-black/30" />
-      {/* Readability layer */}
-      <div className="absolute inset-0 bg-black/10" />
+      {/* Lighter Brand Overlay */}
+      <div className="absolute inset-0 bg-[#E63946]/40" />
+      <div className="absolute inset-0 bg-black/20" />
 
       {/* Content Container */}
       <div className="relative z-10 w-3/4 mx-auto px-6 md:px-0 flex flex-col md:flex-row md:items-end md:justify-between gap-6">

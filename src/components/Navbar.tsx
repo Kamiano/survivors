@@ -42,9 +42,11 @@ export default function Navbar() {
       name: "Priorities",
       dropdown: [
         { name: "Expand Health and Wellness Response", href: "/health" },
-        { name: "Promote and Protect the Rights of Key Population", href: "/rights" },
-        { name: "Expand Livelihoods Options for Key Population", href: "/livelihoods" },
+        { name: "Promote and Protect the Rights of Sex Workers", href: "/rights" },
+        { name: "Expand Livelihoods Options for Sex Workers", href: "/livelihoods" },
         { name: "Organizational Strengthening and Sustainability", href: "/organizational" },
+        { name: "Sexual and Reproductive Health and Rights", href: "/sexual" },
+        { name: "Mental Well being of Sex Workers", href: "/mental" },
       ],
     },
     { name: "Our Strategic Plan", href: "/plan" },
