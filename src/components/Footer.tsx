@@ -196,8 +196,8 @@ export default function Footer() {
             <div className="space-y-3 pt-1 text-white/90 font-normal">
               <p>
                 <span className="font-bold mr-1">Email:</span>
-                <a href="mailto:info@survivors.or.ke" className="hover:underline">
-                  info@survivors.or.ke
+                <a href="mailto:carole@survivors.or.ke" className="hover:underline">
+                  carole@survivors.or.ke
                 </a>
               </p>
               <p>

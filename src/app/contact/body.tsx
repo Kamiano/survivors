@@ -46,9 +46,9 @@ export default function ContactBody() {
     {
       icon: Mail,
       title: "Email Us",
-      value: "info@survivors.or.ke",
+      value: "carole@survivors.or.ke",
       description: "For general inquiries, partnerships, and advocacy initiatives.",
-      href: "mailto:info@survivors.or.ke"
+      href: "mailto:carole@survivors.or.ke"
     },
     {
       icon: Phone,

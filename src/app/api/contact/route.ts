@@ -22,7 +22,7 @@ export async function POST(request: Request) {
       // Once your client verifies their domain (e.g., yourclient.com), 
       // you can change this to 'Contact Form <contact@yourclient.com>'
       from: "Survivors Organization Contact <onboarding@resend.dev>",
-      to: ["info@survivors.or.ke"], // Your client's target Gmail address
+      to: ["carole@survivors.or.ke"], // Your client's target Gmail address
       replyTo: email,           // Allows your client to click "Reply" directly in Gmail to reply to the user
       subject: `[Contact Form Submission] ${subject}`,
       html: `
