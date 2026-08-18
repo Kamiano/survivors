@@ -18,22 +18,24 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Survivors Organization",
-  description: "A community-led organization working alongside sex workers and marginalized communities in Kenya to advance justice, health access, rights, and economic empowerment.",
+  description: "A sex workers led organization working alongside  marginalized communities in Kenya to advance justice, health access, rights, and economic empowerment.",
   keywords: [
     "Community Advocacy Kenya",
     "Human Rights Kenya",
     "Sex Workers Support",
     "Economic Empowerment",
     "Health Rights",
-    "Social Justice Kenya"
+    "Social Justice Kenya",
+    "Survivors Busia",
+    "Survivor"
   ],
   openGraph: {
-    title: "Community Empowerment & Advocacy Initiative",
-    description: "Empowering communities through human rights advocacy, health support, and economic opportunities across Kenya.",
+    title: "Sex worker Empowerment & Advocacy Initiative",
+    description: "Empowering sex workerss through human rights advocacy, health support, and economic opportunities across Kenya.",
     url: "http://localhost:3000",
     type: "website",
     locale: "en_KE",
-    siteName: "Community Empowerment Initiative",
+    siteName: "Survivors Organization",
   },
 };
 
