@@ -73,7 +73,7 @@ export default function WhoWeAre() {
 
               {/* Declaration */}
               <p className="text-lg leading-relaxed text-neutral-800">
-                Survivors Busia is a grassroots, survivor-led organization operating
+                Survivors Busia is a grassroots, sex worker-led organization operating
                 at the Kenya–Uganda border to defend human rights, heal trauma, and restore dignity.
               </p>
 
