@@ -35,7 +35,7 @@ export default function Navbar() {
       name: "About Us",
       dropdown: [
         { name: "Who We Are", href: "/who-we-are" },
-        { name: "Our Team", href: "#" }
+        { name: "Our Team", href: "/team" }
       ],
     },
     {
