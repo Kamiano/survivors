@@ -105,13 +105,6 @@ export default function CommunityVoices() {
                 Community Voice
               </p>
             </div>
-
-            {/* controls (minimal, not UI-heavy) */}
-            <div className="flex gap-3 pt-4">
-
-
-            </div>
-
           </div>
         </div>
       </div>

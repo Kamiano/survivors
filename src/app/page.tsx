@@ -10,6 +10,7 @@ import Impact from "@/components/Impact";
 import CommunityVoices from "@/components/CommunityVoices";
 import LatestNews from "@/components/LatestNews";
 import Footer from "@/components/Footer";
+import FeaturedStory from "@/components/featuredStory";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -37,6 +38,9 @@ export default function Home() {
 
           {/* Section 4: Impact Metrics */}
           <Impact />
+
+          {/* Section 5: Featured Story */}
+          <FeaturedStory />
 
           {/* Section 6: Community Voices Testimonial Slider */}
           <CommunityVoices />
