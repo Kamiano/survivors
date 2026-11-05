@@ -6,7 +6,6 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import WhoWeAre from "@/components/WhoWeAre";
 import FocusAreas from "@/components/FocusAreas";
-import Impact from "@/components/Impact";
 import CommunityVoices from "@/components/CommunityVoices";
 import LatestNews from "@/components/LatestNews";
 import Footer from "@/components/Footer";
