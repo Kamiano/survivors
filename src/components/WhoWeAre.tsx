@@ -145,7 +145,7 @@ export default function WhoWeAre() {
                   Busia
                 </div>
                 <div className="text-[10px] uppercase tracking-widest text-neutral-500">
-                  Grassroots Led
+                  Sex-Workers Led
                 </div>
               </div>
             </motion.div>
