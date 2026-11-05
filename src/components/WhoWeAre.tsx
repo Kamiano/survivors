@@ -142,9 +142,6 @@ export default function WhoWeAre() {
             >
               <div className="text-center">
                 <div className="text-2xl font-semibold text-[#E63946]">
-                  Busia
-                </div>
-                <div className="text-[10px] uppercase tracking-widest text-neutral-500">
                   Sex-Workers Led
                 </div>
               </div>
