@@ -38,7 +38,6 @@ export default function Home() {
 
           {/* Section 4: Impact Metrics */}
           <Impact/>
-
           {/* Section 5: Featured Story */}
           <FeaturedStory />
 
