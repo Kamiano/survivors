@@ -37,7 +37,7 @@ export default function Home() {
           <FocusAreas />
 
           {/* Section 4: Impact Metrics */}
-          <Impact />
+          <Impact/>
 
           {/* Section 5: Featured Story */}
           <FeaturedStory />
